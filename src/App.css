@@ -1,38 +1,43 @@
 * {
   padding: 0;
   margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-y: hidden;
 }
 
-
-.App {
+header {
   max-width: 2000px;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-}
-
-ul {
-  list-style: none;
+  transform: translateY(30%);
 }
 
 #Dark a {
-  color: white;
+  --text-color: white;
   text-decoration: none;
 }
 
 #Light a{
-  color: #0d3f67;
+  --text-color: #0d3f67;
   text-decoration: none;
 }
 
 #Dark {
-  background-color: #282c34;
-  color: white;
+  --background-color: #282c34;
+  --text-color: white;
 }
 
 #Light {
-  background-color: #f2f4f6;
-  color: #0d3f67;
+  --background-color: #f2f4f6;
+  --text-color: #0d3f67;
 }
+
+
+.react-switch, .Mode {
+  float: right;
+  margin: 30px;
+}
+
