@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import Button from "../button/Button";
 
 const Quotes = () => {
   const [quote, setQuote] = useState("");
@@ -20,7 +20,7 @@ const Quotes = () => {
       <div className="content">
         <p>{quote}</p>
         <p>{author}</p>
-        <button onClick={getQuote}>Get Quotes</button>
+        <Button onClick={getQuote} text="Quotes"/>
       </div>
     );
   }

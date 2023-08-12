@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+.App {
+  max-width: 2000px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+#Dark a {
+  color: white;
+  text-decoration: none;
+}
+
+#Light a{
+  color: #0d3f67;
+  text-decoration: none;
+}
+
+#Dark {
+  background-color: #282c34;
+  color: white;
+}
+
+#Light {
+  background-color: #f2f4f6;
+  color: #0d3f67;
+}
