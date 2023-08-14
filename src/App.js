@@ -35,13 +35,13 @@ function App() {
           id="material-switch"
          />
       <span className="Mode">{contextTheme} Mode</span>
-     <Navbar />
         <header className="App-header">
-          <Routes>
+        <Navbar />
+    </header>
+    <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>
-    </header>
     <Footer />
     </div>
   );

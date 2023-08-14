@@ -4,15 +4,12 @@
   background-color: var(--background-color);
   color: var(--text-color);
   overflow-y: hidden;
+  font-style: Arial, sans-serif;
 }
 
 header {
-  max-width: 2000px;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transform: translateY(30%);
+  height: 50px;
+  
 }
 
 #Dark a {
@@ -41,3 +38,7 @@ header {
   margin: 30px;
 }
 
+.App {
+  max-width: 2000px;
+  height: 100vh;
+}
