@@ -4,12 +4,17 @@
   background-color: var(--background-color);
   color: var(--text-color);
   overflow-y: hidden;
-  font-style: Arial, sans-serif;
 }
 
 header {
   height: 50px;
   
+}
+
+body {
+  padding: 40px;
+  font-family: Sans-Serif;
+  text-align: center;
 }
 
 #Dark a {

@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../button/Button';
 
-export default function Countdown() {
+export default function Countdown({ audioRef }) {
   const [time, setTime] = useState({ hours: 0, minutes: 10, seconds: 0 });
   const [isActive, setIsActive] = useState(false);
   const [inputsEnabled, setInputsEnabled] = useState(true);
   
-
   useEffect(() => {
     let intervalId = null;
 
     if (isActive) {
+      audioRef.current.play();
       intervalId = setInterval(() => {
         setTime((prevTime) => {
           let { hours, minutes, seconds } = prevTime;
@@ -19,6 +19,7 @@ export default function Countdown() {
             setIsActive(false);
             setInputsEnabled(true);
             clearInterval(intervalId);
+            audioRef.current.pause();
             return { hours: 0, minutes: 0, seconds: 0 };
           }
 
@@ -45,13 +46,14 @@ export default function Countdown() {
       }, 1000);
     } else {
       clearInterval(intervalId);
+      audioRef.current.pause();
+      
     }
 
     return () => {
       clearInterval(intervalId);
     };
-  }, [isActive]);
-
+  }, [isActive, audioRef]);
 
   const handleTimeChange = (event, name) => {
     const value = event.target.value;
@@ -61,35 +63,36 @@ export default function Countdown() {
       setTime({ ...time, [name]: '' });
       return;
     }
-    
+
     const MAX_VALUES = {
       hours: 23,
       minutes: 59,
-      seconds: 59
+      seconds: 59,
     };
 
     const MIN_VALUES = {
       hours: 0,
       minutes: 0,
-      seconds: 0
+      seconds: 0,
     };
 
     const parsedValue = parseInt(value);
-    if (isNaN(parsedValue)) 
-    return;
-    
+    if (isNaN(parsedValue)) return;
+
     const maxValue = MAX_VALUES[name];
     const minValue = MIN_VALUES[name];
-    if (parsedValue > maxValue || parsedValue < minValue) 
-    return;
-    
+    if (parsedValue > maxValue || parsedValue < minValue) return;
+
     setTime((prevTime) => ({
       ...prevTime,
-      [name]: parsedValue
+      [name]: parsedValue,
     }));
   };
 
   const handleClick = () => {
+    if (time.hours === 0 && time.minutes === 0 && time.seconds === 0) {
+      return;
+    }
     setIsActive((current) => !current);
     setInputsEnabled((enabled) => !enabled);
   };
@@ -130,7 +133,7 @@ export default function Countdown() {
         onChange={(event) => handleTimeChange(event, 'seconds')}
         disabled={!inputsEnabled}
       />
-      <Button onClick={handleClick} text={isActive ? 'Pause' : 'Start'} />
+      <Button onClick={handleClick}  text={isActive ? 'Pause' : 'Play'} />
     </section>
   );
 }
