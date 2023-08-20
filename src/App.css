@@ -38,9 +38,9 @@ body {
 
 .react-switch, .Mode {
   float: right;
-  margin: 30px;
+  transform: translateY(150%);
+  margin-right: 3%;
 }
-
 .App {
   max-width: 2000px;
   height: 100vh;
