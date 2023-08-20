@@ -50,3 +50,18 @@ body {
   max-width: 2000px;
   height: 100vh;
 }
+
+ #Dark .active, #Light .active {
+  --background-color: aqua;
+}
+
+@media only screen and (max-width: 767px) {
+  .Mode {
+    font-size: 15px;
+  }
+
+  .react-switch {
+    transform: translateY(60%);
+  }
+
+}

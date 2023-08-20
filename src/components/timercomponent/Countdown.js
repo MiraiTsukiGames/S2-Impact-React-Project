@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from '../button/Button';
+import styles from './Countdown.module.css';
 
 export default function Countdown({ audioRef }) {
   const [time, setTime] = useState({ hours: 0, minutes: 10, seconds: 0 });
@@ -100,13 +101,14 @@ export default function Countdown({ audioRef }) {
   return (
     <section className="timer">
       <h1>Timer</h1>
+      <span className={styles.time}>{time.hours} : {time.minutes} : {time.seconds}</span>
       <label htmlFor="hours">Hours:</label>
       <input
         type="number"
         id="hours"
         min={0}
         max={23}
-        value={time.hours}
+        placeholder="0"
         onKeyDown={(event) => handleTimeChange(event, 'hours')}
         onChange={(event) => handleTimeChange(event, 'hours')}
         disabled={!inputsEnabled}
@@ -117,7 +119,7 @@ export default function Countdown({ audioRef }) {
         id="minutes"
         min={0}
         max={59}
-        value={time.minutes}
+        placeholder="10"
         onKeyDown={(event) => handleTimeChange(event, 'minutes')}
         onChange={(event) => handleTimeChange(event, 'minutes')}
         disabled={!inputsEnabled}
@@ -128,7 +130,7 @@ export default function Countdown({ audioRef }) {
         id="seconds"
         min={0}
         max={59}
-        value={time.seconds}
+        placeholder="0"
         onKeyDown={(event) => handleTimeChange(event, 'seconds')}
         onChange={(event) => handleTimeChange(event, 'seconds')}
         disabled={!inputsEnabled}

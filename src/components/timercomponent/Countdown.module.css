@@ -1,0 +1,8 @@
+.time {
+    position: absolute;
+    transform: translateY(-90%);
+    left: 45%;
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+
