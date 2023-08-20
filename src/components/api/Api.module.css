@@ -1,8 +1,8 @@
 .content {
-    position: absolute;
-    top: 20%;
-    margin: 3%;
-    text-align: right;
+    position: relative;
+    top: -38%;
+    margin-right: auto;
+    text-align: left;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     line-height: 1.3;
 }

@@ -100,7 +100,6 @@ export default function Countdown({ audioRef }) {
 
   return (
     <section className="timer">
-      <h1>Timer</h1>
       <span className={styles.time}>{time.hours} : {time.minutes} : {time.seconds}</span>
       <label htmlFor="hours">Hours:</label>
       <input
