@@ -2,15 +2,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
   font-weight: bold;
 }
 
-.brand-name {
-  text-decoration: none;
-  font-size: 1.3rem;
+img {
   margin-left: 10%;
+  width: 60px;
+  height: auto;
 }
+
 
 .hamburger {
   border: 0;

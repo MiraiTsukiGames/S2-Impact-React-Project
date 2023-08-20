@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navbar.css';
+import Meditation from '../../assets/img/logo.png';
 
 const Navbar = () => {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
@@ -9,9 +10,7 @@ const Navbar = () => {
 
   return (
     <nav  className="navigation">
-        <Link to="/" className="brand-name">
-          Website
-        </Link>
+        <img src={Meditation} alt="Logo" className="brand-name" />
         <button className="hamburger" onClick={() => setIsNavExpanded(!isNavExpanded)}>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
