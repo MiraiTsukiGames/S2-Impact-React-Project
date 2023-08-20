@@ -8,11 +8,11 @@
 
 header {
   height: 50px;
-  
 }
 
 body {
   font-family: Sans-Serif;
+  font-size: 20px;
 }
 
 #Dark a {
@@ -38,9 +38,14 @@ body {
 
 .react-switch, .Mode {
   float: right;
-  transform: translateY(150%);
+  transform: translateY(100%);
   margin-right: 3%;
 }
+
+.react-switch {
+  top: 1%;
+}
+
 .App {
   max-width: 2000px;
   height: 100vh;
