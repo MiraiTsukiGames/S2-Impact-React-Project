@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import Button from '../button/Button';
+import SpecificButton from '../button/Playbutton';
 import styles from './Countdown.module.css';
+
 
 export default function Countdown({ audioRef }) {
   const [time, setTime] = useState({ hours: 0, minutes: 10, seconds: 0 });
@@ -102,7 +103,7 @@ export default function Countdown({ audioRef }) {
     <section>
       <span className={styles.timer}>{time.hours} : {time.minutes} : {time.seconds}</span>
       <p className={styles.paragraph}>Please select the time and click play</p>
-      <Button className={styles.play} onClick={handleClick}  text={isActive ? 'Pause' : 'Play'} />
+      <SpecificButton onClick={handleClick} isActive={isActive} />
       <div>
       <label htmlFor="hours" className={styles.letters}>Hours:</label>
       <input
