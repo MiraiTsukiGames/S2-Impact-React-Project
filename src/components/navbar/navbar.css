@@ -73,8 +73,10 @@ img {
     display: block;
     flex-direction: column;
     position: absolute;
-    transform: translate(0%, -10%);
     z-index: 1;
+    top: 10%;
+    font-size: 15px;
+    width: 100%;
   }
 
   .menu-expanded ul {

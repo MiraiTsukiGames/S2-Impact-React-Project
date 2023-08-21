@@ -29,3 +29,34 @@
     align-self: center;
     margin-top: 20px;
   }
+
+  @media only screen and (max-width: 767px) {
+    .container {
+        padding: 20px;
+      }
+      .quoteContainer {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+      }
+      .buttonContainer {
+        margin-top: 5px;
+      }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .container {
+       padding: 10px;
+      }
+
+    .quoteContainer {
+        font-size: 14px;
+      }
+
+      .buttonContainer {
+        margin-top: 0;
+      }
+      .trackContainer {
+        margin-top: 0;
+      }
+  }

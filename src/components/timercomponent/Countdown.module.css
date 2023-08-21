@@ -24,3 +24,26 @@
     font-size: 18px;
     text-align: center;
 }
+
+@media only screen and (max-width: 576px) {
+    .timer {
+        font-size: 25px;
+    }
+
+    .paragraph {
+        font-size: 12px;
+    }
+
+    .letters {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+
+    .numbers {
+        font-size: 14px;
+    }
+
+    ::placeholder {
+        font-size: 14px;
+    }
+}
