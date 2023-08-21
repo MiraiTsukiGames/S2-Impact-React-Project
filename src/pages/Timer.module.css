@@ -1,15 +1,21 @@
 .container {
-    max-width: 2000px;
-    height: 100vh;
-    displaY: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 
-.paragraph {
-    position: relative;
-    font-size: 25px;
-    top: -60px;
-    text-align: center;
-}
+  .countdownContainer {
+    margin-bottom: 20px;
+  }
+
+  .trackContainer {
+    margin-bottom: 20px;
+  }
+  
+  .quoteContainer {
+    margin-bottom: 20px;
+  }

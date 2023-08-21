@@ -99,9 +99,13 @@ export default function Countdown({ audioRef }) {
   };
 
   return (
-    <section className="timer">
-      <span className={styles.time}>{time.hours} : {time.minutes} : {time.seconds}</span>
-      <label htmlFor="hours">Hours:</label>
+    <section className={styles.timer}>
+    <div className={styles.time}>
+      <span>{time.hours} : {time.minutes} : {time.seconds}</span>
+      <p className={styles.paragraph}>Please select the time and click play</p>
+      </div>
+      <div>
+      <label htmlFor="hours" className={styles.letters}>Hours:</label>
       <input
         type="number"
         id="hours"
@@ -111,8 +115,9 @@ export default function Countdown({ audioRef }) {
         onKeyDown={(event) => handleTimeChange(event, 'hours')}
         onChange={(event) => handleTimeChange(event, 'hours')}
         disabled={!inputsEnabled}
+        className={styles.numbers}
       />
-      <label htmlFor="minutes">Minutes:</label>
+      <label htmlFor="minutes" className={styles.letters}>Minutes:</label>
       <input
         type="number"
         id="minutes"
@@ -122,8 +127,9 @@ export default function Countdown({ audioRef }) {
         onKeyDown={(event) => handleTimeChange(event, 'minutes')}
         onChange={(event) => handleTimeChange(event, 'minutes')}
         disabled={!inputsEnabled}
+        className={styles.numbers}
       />
-      <label htmlFor="seconds">Seconds:</label>
+      <label htmlFor="seconds" className={styles.letters}>Seconds:</label>
       <input
         type="number"
         id="seconds"
@@ -133,7 +139,9 @@ export default function Countdown({ audioRef }) {
         onKeyDown={(event) => handleTimeChange(event, 'seconds')}
         onChange={(event) => handleTimeChange(event, 'seconds')}
         disabled={!inputsEnabled}
+        className={styles.numbers}
       />
+      </div>
       <Button onClick={handleClick}  text={isActive ? 'Pause' : 'Play'} />
     </section>
   );

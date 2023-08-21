@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+import styles from './footer.module.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <p>Copyright © 2021</p>
+    <footer className={styles.footer}>
+      <p>Copyright Samanta Mancini ©2023</p>
     </footer>
   );
 };
