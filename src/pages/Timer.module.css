@@ -1,25 +1,31 @@
 .container {
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    padding: 20px;
-    margin: 0 auto;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     max-width: 1200px;
-  }
-
-  .countdownContainer {
-    margin-bottom: 20px;
+    height: 100vh;
   }
 
   .trackContainer {
-    margin-bottom: 20px;
+    margin-top: 20px;
   }
   
   .quoteContainer {
-    margin-bottom: 20px;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    text-align: left;
   }
 
   .buttonContainer {
-    bottom: 0;
+    align-self: center;
+    margin-top: 20px;
   }
+
+

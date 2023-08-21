@@ -10,8 +10,8 @@ const Timer = () => {
   const audioRef = useRef(new Audio());
 
   return (
-    <div className={styles.container}>
-      <Title testo="Timer" />
+    <section className={styles.container}>
+      <Title testo="Timer"/>
       <div className={styles.countdownContainer}>
         <Countdown audioRef={audioRef} />
       </div>
@@ -24,7 +24,7 @@ const Timer = () => {
       <div className={styles.buttonContainer}>
       <Button onClick={() => (window.location.href = '/')} text="Home" />
       </div>
-    </div>
+    </section>
   );
 };
 
