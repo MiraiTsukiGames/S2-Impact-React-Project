@@ -20,8 +20,8 @@ export default function Track({ audioRef }) {
   };
 
   return (
-    <div className={styles.sounds}>
-      <h2>Sounds</h2>
+    <>
+      <h2 className={styles.sounds}>Sounds</h2>
       <p>Select a sound</p>
       <audio ref={audioRef} src={currentTrack.src} />
       {tracks.map((sound, index) => (
@@ -31,7 +31,7 @@ export default function Track({ audioRef }) {
           text={sound.title}
         />
       ))}
-    </div>
+    </>
   );
 }
 

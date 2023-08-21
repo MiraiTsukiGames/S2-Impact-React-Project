@@ -99,11 +99,10 @@ export default function Countdown({ audioRef }) {
   };
 
   return (
-    <section className={styles.timer}>
-    <div className={styles.time}>
-      <span>{time.hours} : {time.minutes} : {time.seconds}</span>
+    <section>
+      <span className={styles.timer}>{time.hours} : {time.minutes} : {time.seconds}</span>
       <p className={styles.paragraph}>Please select the time and click play</p>
-      </div>
+      <Button className={styles.play} onClick={handleClick}  text={isActive ? 'Pause' : 'Play'} />
       <div>
       <label htmlFor="hours" className={styles.letters}>Hours:</label>
       <input
@@ -142,7 +141,6 @@ export default function Countdown({ audioRef }) {
         className={styles.numbers}
       />
       </div>
-      <Button onClick={handleClick}  text={isActive ? 'Pause' : 'Play'} />
     </section>
   );
 }

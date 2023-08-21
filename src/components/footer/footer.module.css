@@ -1,12 +1,11 @@
 footer {
     bottom: 0;
     position: fixed;
-    background-color: #000000;
     width: 100%;
     text-align: center;
     padding: 10px;
   }
 
   footer p {
-    font-size: 12px;
+    font-size: 18px;
   }

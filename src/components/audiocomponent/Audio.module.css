@@ -1,7 +1,9 @@
-/*.sounds {
-    max-width: 500px;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    transform: translateY(80%);
-  }*/
+.sounds{
+    font-size: 25px;
+}
+
+p {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

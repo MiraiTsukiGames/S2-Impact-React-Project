@@ -18,12 +18,12 @@ const Quotes = () => {
     };
 
     return (
-      <div className={styles.content}>
+      <>
         <h2 className={styles.title}>Quotes</h2>
         <p className={styles.quotes}>{quote}</p>
         <p  className={styles.author}>{author}</p>
         <Button onClick={getQuote} text="Quotes"/>
-      </div>
+        </>
     );
   }
 

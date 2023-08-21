@@ -1,1 +1,26 @@
+.timer {
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
+.paragraph {
+    font-size: 15px;
+}
+
+.letters {
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+.numbers {
+    margin-top: 10px;
+    padding: 4px;
+    font-size: 18px;
+    text-align: center;
+}
+
+::placeholder {
+    font-size: 18px;
+    text-align: center;
+}
