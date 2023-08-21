@@ -19,3 +19,7 @@
   .quoteContainer {
     margin-bottom: 20px;
   }
+
+  .buttonContainer {
+    bottom: 0;
+  }

@@ -21,7 +21,9 @@ const Timer = () => {
       <div className={styles.quoteContainer}>
         <Quote />
       </div>
+      <div className={styles.buttonContainer}>
       <Button onClick={() => (window.location.href = '/')} text="Home" />
+      </div>
     </div>
   );
 };
