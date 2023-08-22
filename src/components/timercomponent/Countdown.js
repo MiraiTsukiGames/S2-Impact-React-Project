@@ -16,12 +16,16 @@ export default function Countdown({ audioRef }) {
         setTime((prevTime) => {
           let { hours, minutes, seconds } = prevTime;
 
-          if (hours === 0 && minutes === 0 && seconds === 0) {
+          if ((hours === 0 || hours === "") && (minutes === 0 || minutes === "") && (seconds === 0 || seconds === "")) {
             setIsActive(false);
             setInputsEnabled(true);
             clearInterval(intervalId);
             audioRef.current.pause();
             return { hours: 0, minutes: 0, seconds: 0 };
+          } else if (hours === "" || minutes === "" || seconds === "") {
+            hours = hours === "" ? 0 : parseInt(hours);
+            minutes = minutes === "" ? 0 : parseInt(minutes);
+            seconds = seconds === "" ? 0 : parseInt(seconds);
           }
 
           let newSeconds = seconds - 1;

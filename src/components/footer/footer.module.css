@@ -13,12 +13,10 @@ footer p {
 
 @media only screen and (max-width: 576px) {
   footer {
-    position: fixed;
-    bottom: -70px;
-    padding: 0;
+    width:80%;
   }
-
   footer p {
     font-size: 12px;
+    text-align: center;
   }
 }

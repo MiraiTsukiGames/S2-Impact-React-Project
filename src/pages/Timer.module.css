@@ -18,7 +18,7 @@
 
 .quoteContainer {
   position: absolute;
-  top: 5%;
+  top: 15%;
   left: 5%;
   text-align: left;
   font-style: italic;
@@ -36,9 +36,7 @@
     padding: 20px;
   }
   .quoteContainer {
-    position: static;
-    text-align: center;
-    margin-top: 20px;
+    display: none;
   }
   .buttonContainer {
     margin-top: 5px;
@@ -58,6 +56,6 @@
     margin-top: 0;
   }
   .trackContainer {
-    margin-top: 0;
+    display: none;
   }
 }

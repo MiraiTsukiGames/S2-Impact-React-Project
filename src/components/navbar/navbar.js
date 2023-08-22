@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className="navigation">
       <img src={Meditation} alt="Logo" className="brand-name" />
-      <p>Borcelle Yoga Studio</p>
+      <p className="brand-text">Borcelle Yoga Studio</p>
       <button
         className="hamburger"
         onClick={() => setIsNavExpanded(!isNavExpanded)}
