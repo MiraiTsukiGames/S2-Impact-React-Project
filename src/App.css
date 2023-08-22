@@ -4,15 +4,19 @@
   background-color: var(--background-color);
   color: var(--text-color);
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-header {
-  height: 50px;
-}
 
 body {
   font-family: Sans-Serif;
   font-size: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  height: 60px;
 }
 
 #Dark a {
@@ -20,32 +24,28 @@ body {
   text-decoration: none;
 }
 
+#Dark nav {
+  --background-color: #000000;
+}
 #Light a{
   --text-color: #000000;
   text-decoration: none;
 }
 
 #Dark {
-  --background-color: linear-gradient(to bottom right, #1f1f1f, #292929);
   --text-color: #ffffff;
-    filter: brightness(0.5);
 }
+
 
 #Light {
-  --background-color: linear-gradient(to bottom right, #ffffff, #f5f5f5);;
-  --text-color: #ffffff;
-    filter: brightness(0.8);
+  --text-color: #bbb6b6;
+  filter: brightness(0.9);
 }
 
-
-.react-switch, .Mode {
-  float: right;
-  transform: translateY(100%);
-  margin-right: 3%;
-}
 
 .react-switch {
-  top: 1%;
+  float: right;
+  top: 5%;
 }
 
 .App {
@@ -73,5 +73,6 @@ background-color: transparent;
   .react-switch {
     transform: translateY(60%);
   }
-
 }
+
+

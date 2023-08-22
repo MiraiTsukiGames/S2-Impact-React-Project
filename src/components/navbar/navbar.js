@@ -11,6 +11,7 @@ const Navbar = () => {
   return (
     <nav  className="navigation">
         <img src={Meditation} alt="Logo" className="brand-name" />
+        <p>Borcelle Yoga Studio</p>
         <button className="hamburger" onClick={() => setIsNavExpanded(!isNavExpanded)}>
         <svg 
           xmlns="http://www.w3.org/2000/svg" 

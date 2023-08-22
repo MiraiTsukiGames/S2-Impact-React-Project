@@ -19,7 +19,10 @@ function App() {
 
   return (
   <div className="App" id={contextTheme}>
-  <ReactSwitch 
+  <header className="App-header">
+        <Navbar />
+        <span className="Mode">{contextTheme} Mode</span>
+        <ReactSwitch 
         onChange={handleSwitch}
           checked={checked}
           onColor="#86d3ff"
@@ -34,11 +37,8 @@ function App() {
           className="react-switch"
           id="material-switch"
          />
-      <span className="Mode">{contextTheme} Mode</span>
-        <header className="App-header">
-        <Navbar />
     </header>
-    <Routes>
+        <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/timer" element={<Timer />} />
         </Routes>

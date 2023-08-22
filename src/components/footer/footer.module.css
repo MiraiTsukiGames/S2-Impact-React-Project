@@ -1,9 +1,10 @@
 footer {
+    position:absolute;
     bottom: 0;
-    position: fixed;
+    clear: both;
     width: 100%;
-    text-align: center;
-    padding: 10px;
+    text-align: left;
+    left: 5%;
   }
 
   footer p {
