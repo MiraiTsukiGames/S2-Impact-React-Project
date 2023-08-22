@@ -16,7 +16,11 @@ export default function Countdown({ audioRef }) {
         setTime((prevTime) => {
           let { hours, minutes, seconds } = prevTime;
 
-          if ((hours === 0 || hours === "") && (minutes === 0 || minutes === "") && (seconds === 0 || seconds === "")) {
+          if (
+            (hours === 0 || hours === "") &&
+            (minutes === 0 || minutes === "") &&
+            (seconds === 0 || seconds === "")
+          ) {
             setIsActive(false);
             setInputsEnabled(true);
             clearInterval(intervalId);

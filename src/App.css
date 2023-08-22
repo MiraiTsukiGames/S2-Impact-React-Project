@@ -19,7 +19,8 @@ header {
   height: 80px;
 }
 
-#Dark a, .brand-text {
+#Dark a,
+.brand-text {
   --text-color: #ffffff;
   text-decoration: none;
 }
@@ -34,14 +35,14 @@ header {
 
 #Dark {
   --text-color: #b8b8b8;
-  filter: brightness(0.9);
 }
 
 #Light {
   --text-color: #ffffff;
 }
 
-#Light .Mode, #Light .brand-text {
+#Light .Mode,
+#Light .brand-text {
   --text-color: #000000;
 }
 
@@ -59,7 +60,7 @@ header {
   float: right;
 }
 #Dark .Mode {
---text-color: #ffffff;
+  --text-color: #ffffff;
 }
 
 .App {
@@ -69,8 +70,6 @@ header {
 
 #Dark .brand-name {
   background-color: transparent;
-  
-  
 }
 
 @media only screen and (max-width: 767px) {
@@ -78,7 +77,7 @@ header {
     font-size: 15px;
   }
 
- .react-switch {
-  transform: translateX(-80%);
- }
+  .react-switch {
+    transform: translateX(-80%);
+  }
 }

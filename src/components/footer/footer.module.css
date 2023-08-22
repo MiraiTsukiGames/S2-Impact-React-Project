@@ -13,7 +13,7 @@ footer p {
 
 @media only screen and (max-width: 576px) {
   footer {
-    width:80%;
+    width: 80%;
   }
   footer p {
     font-size: 12px;

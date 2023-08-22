@@ -8,12 +8,11 @@ const Home = () => {
   const navigate = useNavigate();
   return (
     <section className={styles.banner}>
-      <Title testo="Welcome to Borcelle Yoga Studio" />
-      <p>Your healthcare is our mission.</p>
-      <Button
-        onClick={() =>navigate("/timer")}
-        text="Getting started"
-      />
+      <div className={styles.card}>
+        <Title testo="Welcome to Borcelle Yoga Studio" />
+        <p>Your healthcare is our mission.</p>
+        <Button onClick={() => navigate("/timer")} text="Getting started" />
+      </div>
     </section>
   );
 };
