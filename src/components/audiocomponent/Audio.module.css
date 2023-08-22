@@ -1,21 +1,21 @@
-.sounds{
-    font-size: 25px;
+.sounds {
+  font-size: 25px;
 }
 
 p {
-    font-size: 15px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 576px) {
-    .sounds {
-        font-size: 18x;
-    }
+  .sounds {
+    font-size: 18x;
+  }
 
-    p {
-        font-size: 12px;
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+  p {
+    font-size: 12px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

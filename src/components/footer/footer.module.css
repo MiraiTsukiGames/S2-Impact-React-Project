@@ -1,24 +1,24 @@
 footer {
-    position:absolute;
-    bottom: 0;
-    clear: both;
-    width: 100%;
-    text-align: left;
-    left: 5%;
+  position: absolute;
+  bottom: 0;
+  clear: both;
+  width: 100%;
+  text-align: left;
+  left: 5%;
+}
+
+footer p {
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 576px) {
+  footer {
+    position: fixed;
+    bottom: -70px;
+    padding: 0;
   }
 
   footer p {
-    font-size: 18px;
+    font-size: 12px;
   }
-
-  @media only screen and (max-width: 576px) {
-    footer {
-        position: fixed;
-        bottom: -70px;
-        padding: 0;
-    }
-
-    footer p {
-        font-size: 12px;
-    }
-  }
+}

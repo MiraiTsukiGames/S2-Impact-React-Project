@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import SpecificButton from '../button/Playbutton';
-import styles from './Countdown.module.css';
-
+import React, { useState, useEffect } from "react";
+import SpecificButton from "../button/Playbutton";
+import styles from "./Countdown.module.css";
 
 export default function Countdown({ audioRef }) {
   const [time, setTime] = useState({ hours: 0, minutes: 10, seconds: 0 });
   const [isActive, setIsActive] = useState(false);
   const [inputsEnabled, setInputsEnabled] = useState(true);
-  
+
   useEffect(() => {
     let intervalId = null;
 
@@ -49,7 +48,6 @@ export default function Countdown({ audioRef }) {
     } else {
       clearInterval(intervalId);
       audioRef.current.pause();
-      
     }
 
     return () => {
@@ -61,8 +59,8 @@ export default function Countdown({ audioRef }) {
     const value = event.target.value;
     const key = event.key;
 
-    if (key === 'Backspace') {
-      setTime({ ...time, [name]: '' });
+    if (key === "Backspace") {
+      setTime({ ...time, [name]: "" });
       return;
     }
 
@@ -101,48 +99,55 @@ export default function Countdown({ audioRef }) {
 
   return (
     <section>
-      <span className={styles.timer}>{time.hours} : {time.minutes} : {time.seconds}</span>
+      <span className={styles.timer}>
+        {time.hours} : {time.minutes} : {time.seconds}
+      </span>
       <p className={styles.paragraph}>Please select the time and click play</p>
       <SpecificButton onClick={handleClick} isActive={isActive} />
       <div>
-      <label htmlFor="hours" className={styles.letters}>Hours:</label>
-      <input
-        type="number"
-        id="hours"
-        min={0}
-        max={23}
-        placeholder="0"
-        onKeyDown={(event) => handleTimeChange(event, 'hours')}
-        onChange={(event) => handleTimeChange(event, 'hours')}
-        disabled={!inputsEnabled}
-        className={styles.numbers}
-      />
-      <label htmlFor="minutes" className={styles.letters}>Minutes:</label>
-      <input
-        type="number"
-        id="minutes"
-        min={0}
-        max={59}
-        placeholder="10"
-        onKeyDown={(event) => handleTimeChange(event, 'minutes')}
-        onChange={(event) => handleTimeChange(event, 'minutes')}
-        disabled={!inputsEnabled}
-        className={styles.numbers}
-      />
-      <label htmlFor="seconds" className={styles.letters}>Seconds:</label>
-      <input
-        type="number"
-        id="seconds"
-        min={0}
-        max={59}
-        placeholder="0"
-        onKeyDown={(event) => handleTimeChange(event, 'seconds')}
-        onChange={(event) => handleTimeChange(event, 'seconds')}
-        disabled={!inputsEnabled}
-        className={styles.numbers}
-      />
+        <label htmlFor="hours" className={styles.letters}>
+          Hours:
+        </label>
+        <input
+          type="number"
+          id="hours"
+          min={0}
+          max={23}
+          placeholder="0"
+          onKeyDown={(event) => handleTimeChange(event, "hours")}
+          onChange={(event) => handleTimeChange(event, "hours")}
+          disabled={!inputsEnabled}
+          className={styles.numbers}
+        />
+        <label htmlFor="minutes" className={styles.letters}>
+          Minutes:
+        </label>
+        <input
+          type="number"
+          id="minutes"
+          min={0}
+          max={59}
+          placeholder="10"
+          onKeyDown={(event) => handleTimeChange(event, "minutes")}
+          onChange={(event) => handleTimeChange(event, "minutes")}
+          disabled={!inputsEnabled}
+          className={styles.numbers}
+        />
+        <label htmlFor="seconds" className={styles.letters}>
+          Seconds:
+        </label>
+        <input
+          type="number"
+          id="seconds"
+          min={0}
+          max={59}
+          placeholder="0"
+          onKeyDown={(event) => handleTimeChange(event, "seconds")}
+          onChange={(event) => handleTimeChange(event, "seconds")}
+          disabled={!inputsEnabled}
+          className={styles.numbers}
+        />
       </div>
     </section>
   );
 }
-

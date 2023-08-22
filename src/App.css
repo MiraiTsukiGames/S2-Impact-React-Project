@@ -7,7 +7,6 @@
   overflow-y: hidden;
 }
 
-
 body {
   font-family: Sans-Serif;
   font-size: 20px;
@@ -27,7 +26,7 @@ header {
 #Dark nav {
   --background-color: #000000;
 }
-#Light a{
+#Light a {
   --text-color: #000000;
   text-decoration: none;
 }
@@ -36,12 +35,10 @@ header {
   --text-color: #ffffff;
 }
 
-
 #Light {
   --text-color: #bbb6b6;
   filter: brightness(0.9);
 }
-
 
 .react-switch {
   float: right;
@@ -53,16 +50,8 @@ header {
   height: 100vh;
 }
 
- #Dark .active {
-  --background-color: #7FDBFF;
-}
-
-#Light .active {
-  --background-color: #00BFFF;
-}
-
 #Dark .brand-name {
-background-color: transparent;
+  background-color: transparent;
 }
 
 @media only screen and (max-width: 767px) {
@@ -74,5 +63,3 @@ background-color: transparent;
     transform: translateY(60%);
   }
 }
-
-

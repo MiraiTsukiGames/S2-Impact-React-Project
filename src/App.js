@@ -1,29 +1,29 @@
 import React, { useState } from "react";
-import { useThemeContext } from './context/Themecontext';
+import { useThemeContext } from "./context/Themecontext";
 import Navbar from "./components/navbar/navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Timer from "./pages/Timer";
 import Footer from "./components/footer/footer";
 import ReactSwitch from "react-switch";
-import './App.css';
+import "./App.css";
 
 function App() {
-  const {contextTheme, setContextTheme} = useThemeContext()
+  const { contextTheme, setContextTheme } = useThemeContext();
   const [checked, setChecked] = useState(false);
 
-  const handleSwitch = (nextChecked) => {       
-    setContextTheme((state) => (state === 'Light' ? 'Dark':'Light'))       
+  const handleSwitch = (nextChecked) => {
+    setContextTheme((state) => (state === "Light" ? "Dark" : "Light"));
     setChecked(nextChecked);
-  }
+  };
 
   return (
-  <div className="App" id={contextTheme}>
-  <header className="App-header">
+    <div className="App" id={contextTheme}>
+      <header className="App-header">
         <Navbar />
         <span className="Mode">{contextTheme} Mode</span>
-        <ReactSwitch 
-        onChange={handleSwitch}
+        <ReactSwitch
+          onChange={handleSwitch}
           checked={checked}
           onColor="#86d3ff"
           onHandleColor="#2693e6"
@@ -36,13 +36,13 @@ function App() {
           width={30}
           className="react-switch"
           id="material-switch"
-         />
-    </header>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/timer" element={<Timer />} />
-        </Routes>
-    <Footer />
+        />
+      </header>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/timer" element={<Timer />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
