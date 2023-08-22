@@ -1,4 +1,5 @@
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import Quote from "../components/api/Api";
 import Countdown from "../components/timercomponent/Countdown";
 import Button from "../components/button/Button";
@@ -8,6 +9,7 @@ import styles from "./Timer.module.css";
 
 const Timer = () => {
   const audioRef = useRef(new Audio());
+  const navigate = useNavigate();
 
   return (
     <section className={styles.container}>
@@ -22,7 +24,7 @@ const Timer = () => {
         <Quote />
       </div>
       <div className={styles.buttonContainer}>
-        <Button onClick={() => (window.location.href = "/")} text="Home" />
+        <Button onClick={() => navigate("/")} text="Home" />
       </div>
     </section>
   );
