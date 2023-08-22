@@ -9,16 +9,19 @@
 }
 
 .letters {
+  position: absolute;
   font-size: 18px;
-  margin: 0 15px;
+  margin: 5px 15px;
+  top: 54%;
 }
 
 .numbers {
-  margin-top: 10px;
+  margin: 25px 0 0 15px;
   padding: 4px;
   font-size: 18px;
   text-align: center;
   border: 1px solid #000000;
+  position: relative;
 }
 
 ::placeholder {
