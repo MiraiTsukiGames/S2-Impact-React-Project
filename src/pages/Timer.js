@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Quote from "../components/api/Api";
 import Countdown from "../components/timercomponent/Countdown";
@@ -10,6 +10,11 @@ import styles from "./Timer.module.css";
 const Timer = () => {
   const audioRef = useRef(new Audio());
   const navigate = useNavigate();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  }
 
   return (
     <section className={styles.container}>
@@ -20,8 +25,13 @@ const Timer = () => {
       <div className={styles.trackContainer}>
         <Track audioRef={audioRef} />
       </div>
+      <div className={isOpen ? "open" : ""}>
+      <button className="toggle-button" onClick={toggleMenu}>
+      Toggle Menu
+      </button>
       <div className={styles.quoteContainer}>
         <Quote />
+      </div>
       </div>
       <div className={styles.buttonContainer}>
         <Button onClick={() => navigate("/")} text="Home" />
