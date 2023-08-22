@@ -9,7 +9,7 @@ const Home = () => {
       <Title testo="Welcome to Borcelle Yoga Studio" />
       <p>Your healthcare is our mission.</p>
       <Button
-        onClick={() => (window.location.href = "/")}
+        onClick={() =>{window.location.href= "/timer"}}
         text="Getting started"
       />
     </section>
