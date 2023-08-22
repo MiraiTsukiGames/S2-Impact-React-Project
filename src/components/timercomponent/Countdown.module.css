@@ -40,18 +40,12 @@
 
   .letters {
     font-size: 14px;
-    margin: 5px 10px;
-    display: flex;
-    flex-direction: column;
-    float: left;
+    top: 65%;
   }
 
   .numbers {
     font-size: 12px;
     margin: 0 10px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
   }
 
   ::placeholder {
