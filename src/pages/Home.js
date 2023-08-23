@@ -11,7 +11,7 @@ const Home = () => {
       <div className={styles.card}>
         <Title testo="Welcome to Borcelle Yoga Studio" />
         <p>Your healthcare is our mission.</p>
-        <Button onClick={() => navigate("/timer")} text="Getting started" />
+        <Button onClick={() => navigate("timer")} text="Getting started" />
       </div>
     </section>
   );
