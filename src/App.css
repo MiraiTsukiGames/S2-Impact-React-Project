@@ -2,14 +2,12 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background-color: var(--background-color);
-  color: var(--text-color);
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
 body {
-  font-family: Sans-Serif;
+  font-family: sans-serif;
   font-size: 20px;
   padding: 0;
   margin: 0;
@@ -21,30 +19,42 @@ header {
 
 #Dark a,
 .brand-text {
-  --text-color: #ffffff;
+ color: white;
   text-decoration: none;
 }
 
 #Dark header {
-  --background-color: #000000;
+  background-color: #000000;
+}
+
+#Light header {
+  background-color: #ffffff;
+  color: #0d3f67
+}
+
+#Light .brand-text{
+  color: #0d3f67
 }
 #Light a {
-  --text-color: #000000;
+  color: #0d3f67;
   text-decoration: none;
 }
 
 #Dark {
-  --text-color: #b8b8b8;
+ color: white;
+ background-color: #000000;
+}
+
+#Dark .Mode {
+  color: #ffffff;
 }
 
 #Light {
-  --text-color: #ffffff;
+  color: #c4e1fa;
+  background-color: #ffffff;
 }
 
-#Light .Mode,
-#Light .brand-text {
-  --text-color: #000000;
-}
+
 
 .react-switch {
   position: absolute;
@@ -59,9 +69,7 @@ header {
   right: 4%;
   float: right;
 }
-#Dark .Mode {
-  --text-color: #ffffff;
-}
+
 
 .App {
   max-width: 2000px;
@@ -70,6 +78,14 @@ header {
 
 #Dark .brand-name {
   background-color: transparent;
+}
+
+#Dark .navbar-sidebar{
+  background-color: #000000;
+}
+
+#Light .navbar-sidebar {
+  background-color: #ffffff;
 }
 
 @media only screen and (max-width: 767px) {
