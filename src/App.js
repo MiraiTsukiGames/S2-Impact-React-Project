@@ -40,7 +40,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/timer" element={<Timer />} />
+        <Route path="timer" element={<Timer />} />
       </Routes>
       <Footer />
     </div>
