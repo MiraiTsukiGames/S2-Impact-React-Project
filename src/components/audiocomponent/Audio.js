@@ -24,6 +24,7 @@ export default function Track({ audioRef }) {
       <h2 className={styles.sounds}>Sounds</h2>
       <p>Select a sound</p>
       <audio ref={audioRef} src={currentTrack.src} />
+      <div className={styles.buttons}>
       {tracks.map((sound, index) => (
         <Button
           key={sound.id}
@@ -31,6 +32,7 @@ export default function Track({ audioRef }) {
           text={sound.title}
         />
       ))}
+      </div>
     </>
   );
 }

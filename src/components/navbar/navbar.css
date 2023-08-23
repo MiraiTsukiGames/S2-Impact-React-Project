@@ -1,33 +1,35 @@
-.navigation {
+nav {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  font-weight: bold;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-img {
-  margin-left: 3%;
-  margin-top: 10px;
+.brand-name {
+  margin-right: 10px;
   width: 50px;
-  height: auto;
+  height: 50px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
 }
 
 .brand-text {
-  position: relative;
-  font-size: 20px;
-  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
 }
+
 .hamburger {
   border: 0;
-  top: 0%;
   padding: 0.5rem;
   height: 40px;
   width: 40px;
   border-radius: 50%;
   background-color: #283b8b;
   cursor: pointer;
-  transition: 0.2s ease-in-out;
-  display: none;
+  display: block;
 }
 
 .hamburger svg {
@@ -35,82 +37,39 @@ img {
 }
 
 .hamburger:hover {
-  background-color: #2642af;
+  background-color: #6785fc;
 }
 
-.navigation-menu {
-  display: flex;
-  margin: auto;
+.navbar-sidebar {
+  position: fixed;
+  top: 8.1%;
+  right: -200px;
+  width: 200px;
+  height: 50vh;
+  transition: right 0.3s ease-in-out;
+  z-index: 1;
 }
 
-.navigation-menu ul {
-  display: flex;
-  list-style-type: none;
-  margin-top: 30px;
+.navbar-sidebar.open {
+  right: 0;
 }
 
-.navigation-menu li {
-  margin-left: 1rem;
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
 }
 
-.navigation-menu li a {
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-item a {
   text-decoration: none;
 }
 
-.menu-expanded ul {
-  display: flex;
-  flex-direction: column;
-}
 
-@media only screen and (max-width: 767px) {
-  .hamburger {
-    display: block;
-    margin: auto;
-    transform: translate(-20%, -20%);
-  }
 
-  .navigation-menu {
-    display: none;
-  }
 
-  .menu-expanded {
-    display: block;
-    flex-direction: column;
-    position: absolute;
-    z-index: 1;
-    top: 10%;
-    font-size: 15px;
-    width: 100%;
-  }
 
-  .menu-expanded ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .menu-expanded li {
-    text-align: center;
-    padding: 1rem;
-    width: 80%;
-  }
-
-  .brand-name {
-    width: 60px;
-  }
-}
-
-@media only screen and (max-width: 576px) {
-  .menu-expanded {
-    top: 10%;
-    font-size: 15px;
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .navigation {
-    justify-content: space-between;
-    padding: 20px;
-  }
-}
