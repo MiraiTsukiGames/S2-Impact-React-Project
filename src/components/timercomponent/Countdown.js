@@ -126,7 +126,7 @@ export default function Countdown({ audioRef }) {
           id="hours"
           min={0}
           max={23}
-          placeholder="0"
+          placeholder={0}
           onKeyDown={(event) => handleTimeChange(event, "hours")}
           onChange={(event) => handleTimeChange(event, "hours")}
           disabled={!inputsEnabled}
@@ -140,7 +140,7 @@ export default function Countdown({ audioRef }) {
           id="minutes"
           min={0}
           max={59}
-          placeholder="10"
+          placeholder={0}
           onKeyDown={(event) => handleTimeChange(event, "minutes")}
           onChange={(event) => handleTimeChange(event, "minutes")}
           disabled={!inputsEnabled}
@@ -154,7 +154,7 @@ export default function Countdown({ audioRef }) {
           id="seconds"
           min={0}
           max={59}
-          placeholder="0"
+          placeholder={0}
           onKeyDown={(event) => handleTimeChange(event, "seconds")}
           onChange={(event) => handleTimeChange(event, "seconds")}
           disabled={!inputsEnabled}
