@@ -1,5 +1,6 @@
 nav {
   width: 80%;
+  box-shadow: 1px #333;
 }
 
 nav .brand {
@@ -43,33 +44,38 @@ img {
 
 .navbar-sidebar {
   position: fixed;
-  top: 12%;
-  right: -200px;
-  width: 200px;
-  height: 50vh;
+  top: 15%;
+  right: -250px;
+  width: 250px;
+  padding: 20px;
+  border-radius: 10px;
   overflow-x: hidden;
   transition: right 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
 .navbar-sidebar.open {
-  right: 0;
+  right: -3%;
 }
 
 .navbar-nav {
   list-style: none;
   padding: 0;
-  margin: 20px;
 }
 
 .nav-item {
   margin-bottom: 10px;
   cursor: pointer;
-}
+  border-bottom: 1px solid #333;
+  width: 100%;
+  text-align: center;
+  }
 
 .nav-item:hover {
   background-color: aqua;
   width: 100%;
+  transition: 0.3s ease;
 }
 
 .nav-item a {
