@@ -16,17 +16,7 @@ export default function Countdown({ audioRef }) {
         setTime((prevTime) => {
           let { hours, minutes, seconds } = prevTime;
 
-          if (
-            (hours === 0 || hours === "") &&
-            (minutes === 0 || minutes === "") &&
-            (seconds === 0 || seconds === "")
-          ) {
-            setIsActive(false);
-            setInputsEnabled(true);
-            clearInterval(intervalId);
-            audioRef.current.pause();
-            return { hours: 0, minutes: 0, seconds: 0 };
-          } else if (hours === "" || minutes === "" || seconds === "") {
+          if (hours === "" || minutes === "" || seconds === "") {
             hours = hours === "" ? 0 : parseInt(hours);
             minutes = minutes === "" ? 0 : parseInt(minutes);
             seconds = seconds === "" ? 0 : parseInt(seconds);
@@ -68,7 +58,10 @@ export default function Countdown({ audioRef }) {
     const key = event.key;
 
     if (key === "Backspace") {
-      setTime({ ...time, [name]: "" });
+      setTime((prevTime) => ({
+        ...prevTime,
+        [name]: "",
+      }));
       return;
     }
 
@@ -98,7 +91,19 @@ export default function Countdown({ audioRef }) {
   };
 
   const handleClick = () => {
-    if (time.hours === 0 && time.minutes === 0 && time.seconds === 0) {
+    if (time.hours === "" || time.minutes === "" || time.seconds === "") {
+      setIsActive(false);
+      setTime({
+        hours: time.hours === "" ? 0 : time.hours,
+        minutes: time.minutes === "" ? 0 : time.minutes,
+        seconds: time.seconds === "" ? 0 : time.seconds,
+      });
+      return;
+    }
+  
+    if (
+      (time.hours === 0 && time.minutes === 0 && time.seconds === 0) 
+    ) {
       return;
     }
     setIsActive((current) => !current);
