@@ -57,7 +57,7 @@ header {
 
 .react-switch {
   position: absolute;
-  top: -20%;
+  top: 0;
   right: 5%;
   float: right;
 }
