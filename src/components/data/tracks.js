@@ -16,92 +16,66 @@ export const tracks = [
   {
     src: sound1,
     id: 1,
-    title: "Sunny day",
-    artist: "Spherià",
-    description: "relaxing sea with bird songs",
+    icon: "Sunny day"
   },
   {
     src: sound2,
     id: 2,
-    title: "Bubbles",
-    artist: "Unknown",
-    description: "relaxing bubbles sounds",
+    icon: "Bubbles"
   },
   {
     src: sound3,
     id: 3,
-    title: "Crackling Fireplace",
-    artist: "Nature Sounds",
-    description: "crackling fireplace with nature sounds",
+    icon: "Crackling Fireplace"
   },
   {
     src: sound4,
     id: 4,
-    title: "Birds Singing",
-    artist: "dcPoke",
-    description: "relaxing bird songs",
+    icon: "Birds Singing",
   },
   {
     src: sound5,
     id: 5,
-    title: "Dreaming Under The Stars",
-    artist: "Unknown",
-    description: "dreamy and relaxing ambient music",
+    icon: "Dreaming Under The Stars"
   },
   {
     src: sound6,
     id: 6,
-    title: "Forest Wind",
-    artist: "Unknown",
-    description: "gentle wind blowing through the trees",
+    icon: "Forest Wind"
   },
   {
     src: sound7,
     id: 7,
-    title: "Gentle Ocean Waves",
-    artist: "jackmichaelking",
-    description: "gentle ocean waves with bird sounds",
+    icon: "Gentle Ocean Waves"
   },
   {
     src: sound8,
     id: 8,
-    title: "Peaceful Garden",
-    artist: "Unknown",
-    description: "healing piano music for meditation",
+    icon: "Peaceful Garden"
   },
   {
     src: sound9,
     id: 9,
-    title: "Rain",
-    artist: "Unknown",
-    description: "relaxing rain sounds",
+    icon: "Rain"
   },
   {
     src: sound10,
     id: 10,
-    title: "Rites",
-    artist: "Unknown",
-    description: "mystical and calming music",
+    icon: "Rites"
   },
   {
     src: sound11,
     id: 11,
-    title: "Stream",
-    artist: "Unknown",
-    description: "calming sounds of a flowing stream",
+    icon: "Stream"
   },
   {
     src: sound12,
     id: 12,
-    title: "Tibetan Bowls",
-    artist: "Olistik Sound Project",
-    description: "meditative sounds of Tibetan bowls",
+    icon: "Tibetan Bowls"
   },
   {
     src: sound13,
     id: 13,
-    title: "Zen Spiritual",
-    artist: "Unknown",
-    description: "ambient music for relaxation and meditation",
+    icon: "Zen Spiritual"
   },
 ];

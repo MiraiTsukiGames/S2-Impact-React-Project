@@ -19,7 +19,6 @@ function App() {
 
   return (
     <div className="App" id={contextTheme}>
-      <header className="App-header">
         <Navbar />
         <span className="Mode">{contextTheme} Mode</span>
         <label htmlFor="material-switch">
@@ -39,7 +38,6 @@ function App() {
             id="material-switch"
         />
          </label>
-      </header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="timer" element={<Timer />} />

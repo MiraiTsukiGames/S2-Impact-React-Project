@@ -25,6 +25,7 @@
   font-style: italic;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  height: fit-content;
 }
 
 .buttonContainer {
@@ -53,15 +54,14 @@
     padding: 20px;
   }
 
-  .countdownContainer,
-  .buttonContainer {
+  .countdownContainer {
     width: 100%;
     max-width: 300px;
     margin: 10px;
   }
 
   .quoteContainer {
-    top: 10%;
+    top: 20%;
     max-width: fit-content;
     height: fit-content;
   }
@@ -69,6 +69,12 @@
  .trackContainer {
   margin: 0;
   padding: 0;
+ }
+
+ .buttonContainer {
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 15px;
  }
 
 }

@@ -3,17 +3,14 @@
   margin: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 body {
-  font-family: sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
   padding: 0;
   margin: 0;
-}
-
-header {
-  height: 80px;
 }
 
 #Dark a,
@@ -22,17 +19,8 @@ header {
   text-decoration: none;
 }
 
-#Dark header {
-  background-color: #000000;
-}
-
-#Light header {
-  background-color: #ffffff;
-  color: #0d3f67
-}
-
 #Light .brand-text{
-  color: #0d3f67
+  color: #0d3f67;
 }
 #Light a {
   color: #0d3f67;
@@ -48,25 +36,32 @@ header {
   color: #ffffff;
 }
 
+#Light .Mode {
+  color: #0d3f67;
+}
+
 #Light {
   color: #c4e1fa;
   background-color: #ffffff;
 }
 
-
-
+header {
+  height: 80px;
+}
 .react-switch {
   position: absolute;
-  top: 0;
-  right: 5%;
-  float: right;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .Mode {
+  display: flex;
   position: relative;
-  top: -20%;
-  right: 4%;
-  float: right;
+  transform: translateY(-50px);
+  justify-content: center;
+  margin: 0;
+  font-weight: bold;
 }
 
 
@@ -77,6 +72,7 @@ header {
 
 #Dark .brand-name {
   background-color: transparent;
+  filter: invert(100%);
 }
 
 #Dark .navbar-sidebar{
@@ -90,9 +86,12 @@ header {
 @media only screen and (max-width: 767px) {
   .Mode {
     font-size: 15px;
+    transform: translateY(-10px);
+
   }
 
   .react-switch {
-    transform: translateX(-80%);
+    top: -1%;
+    transform: translateX(-50%);
   }
 }

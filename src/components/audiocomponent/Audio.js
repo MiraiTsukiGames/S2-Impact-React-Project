@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { tracks } from "../data/tracks";
-import Button from "../button/Button";
 import styles from "./Audio.module.css";
 
 export default function Track({ audioRef }) {
@@ -22,15 +21,13 @@ export default function Track({ audioRef }) {
   return (
     <>
       <h2 className={styles.sounds}>Sounds</h2>
-      <p>Select a sound</p>
       <audio ref={audioRef} src={currentTrack.src} />
       <div className={styles.buttons}>
       {tracks.map((sound, index) => (
-        <Button
-          key={sound.id}
-          onClick={() => handleTrackChange(index)}
-          text={sound.title}
-        />
+        <button key={sound.id}
+          onClick={() => handleTrackChange(index)}>
+          {sound.icon}
+          </button>
       ))}
       </div>
     </>
