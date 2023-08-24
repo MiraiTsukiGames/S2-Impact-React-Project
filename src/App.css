@@ -37,6 +37,10 @@ body {
   color: #000000;
 }
 
+#Dark .hamburger svg {
+  fill: #000000;
+}
+
 #Dark .Mode {
   color: #ffffff;
 }
@@ -55,9 +59,6 @@ body {
   color: #c4e1fa;
 }
 
-header {
-  height: 80px;
-}
 .react-switch {
   position: absolute;
   top: -50px;

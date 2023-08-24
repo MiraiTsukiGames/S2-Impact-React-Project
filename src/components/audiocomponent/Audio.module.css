@@ -33,10 +33,10 @@
 
   .buttons {
     display: inline-block;
-      max-width: fit-content;
-     height: fit-content;
-     margin-right: 0;
-     margin-top: 0;
+    max-width: fit-content;
+    height: fit-content;
+    margin-right: 0;
+    margin-top: 0;
   }
 
   p {
