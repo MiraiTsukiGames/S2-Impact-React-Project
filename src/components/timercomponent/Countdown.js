@@ -2,9 +2,8 @@ import React, { useState, useEffect } from "react";
 import SpecificButton from "../button/Playbutton";
 import styles from "./Countdown.module.css";
 
-export default function Countdown({ audioRef }) {
+export default function Countdown({ audioRef, isActive, setIsActive }) {
   const [time, setTime] = useState({ hours: 0, minutes: 10, seconds: 0 });
-  const [isActive, setIsActive] = useState(false);
   const [inputsEnabled, setInputsEnabled] = useState(true);
 
   useEffect(() => {

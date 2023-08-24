@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Quote from "../components/api/Api";
 import Countdown from "../components/timercomponent/Countdown";
@@ -12,17 +12,17 @@ import "./Timer.css";
 
 const Timer = () => {
   const audioRef = useRef(new Audio());
+  const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate();
- 
 
   return (
     <section className="container">
       <Title testo="Timer" />
       <div className="countdownContainer">
-        <Countdown audioRef={audioRef} />
+        <Countdown audioRef={audioRef} isActive={isActive} setIsActive={setIsActive}/>
       </div>
         <div className="trackContainer">
-        <Track audioRef={audioRef} />
+        <Track audioRef={audioRef} isActive={isActive} />
       </div>
         <div className="quoteContainer">
         <Quote />

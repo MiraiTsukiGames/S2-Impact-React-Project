@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 import { tracks } from "../data/tracks";
 import styles from "./Audio.module.css";
 
-export default function Track({ audioRef }) {
+export default function Track({ audioRef, isActive }) {
   const [trackIndex, setTrackIndex] = useState(0);
   const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
-  
 
   useEffect(() => {
     if (audioRef.current) {
@@ -15,9 +14,9 @@ export default function Track({ audioRef }) {
   }, [audioRef, trackIndex]);
 
   const handleTrackChange = (index) => {
-    setTrackIndex(index);
-    setCurrentTrack(tracks[index]);
-  };
+      setTrackIndex(index);
+      setCurrentTrack(tracks[index]);
+    };
 
   return (
     <>
@@ -28,7 +27,7 @@ export default function Track({ audioRef }) {
         <button key={sound.id}
           onClick={() => handleTrackChange(index)}
           className={index === trackIndex ? styles.active : ""}
-          >
+          disabled={isActive}>
           {sound.icon}
           </button>
       ))}
