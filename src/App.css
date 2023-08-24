@@ -2,8 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
 }
 
 body {
@@ -59,13 +58,12 @@ body {
   color: #c4e1fa;
 }
 
-.react-switch {
+.react-switch-label {
   position: absolute;
-  top: -50px;
+  top: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
-
 .Mode {
   display: flex;
   position: relative;
@@ -78,7 +76,6 @@ body {
 
 .App {
   max-width: 2000px;
-  height: 100vh;
 }
 
 #Dark .brand-name {
@@ -97,12 +94,12 @@ body {
 @media only screen and (max-width: 767px) {
   .Mode {
     font-size: 15px;
-    transform: translateY(-10px);
+    transform: translateY(-15px);
 
   }
 
-  .react-switch {
-    top: -1%;
+  .react-switch-label {
+    top: 70px;
     transform: translateX(-50%);
   }
 }

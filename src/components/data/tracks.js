@@ -12,21 +12,22 @@ import sound11 from "../../assets/sound/stream-1.mp3";
 import sound12 from "../../assets/sound/tibet-bowls-2-olistik-sound-project-patrizio-yoga-161662.mp3";
 import sound13 from "../../assets/sound/zen-spiritual-yoga-massage-meditation-spa-relax-ambient-music-18403.mp3";
 
+
 export const tracks = [
   {
     src: sound1,
     id: 1,
-    icon: "Sunny day"
+    icon: "Sunny Day",
   },
   {
     src: sound2,
     id: 2,
-    icon: "Bubbles"
+    icon: "Bubbles",
   },
   {
     src: sound3,
     id: 3,
-    icon: "Crackling Fireplace"
+    icon: "Crackling-Fireplace",
   },
   {
     src: sound4,
@@ -36,46 +37,46 @@ export const tracks = [
   {
     src: sound5,
     id: 5,
-    icon: "Dreaming Under The Stars"
+    icon: "Dreaming Under The Stars",
   },
   {
     src: sound6,
     id: 6,
-    icon: "Forest Wind"
+    icon: "Forest In The Wind",
   },
   {
     src: sound7,
     id: 7,
-    icon: "Gentle Ocean Waves"
+    icon: "Ocean",
   },
   {
     src: sound8,
     id: 8,
-    icon: "Peaceful Garden"
+    icon: "Peaceful Garden",
   },
   {
     src: sound9,
     id: 9,
-    icon: "Rain"
+    icon: "Rain",
   },
   {
     src: sound10,
     id: 10,
-    icon: "Rites"
+    icon: "Rites",
   },
   {
     src: sound11,
     id: 11,
-    icon: "Stream"
+    icon: "Stream",
   },
   {
     src: sound12,
     id: 12,
-    icon: "Tibetan Bowls"
+    icon: "Tibet Bowls",
   },
   {
     src: sound13,
     id: 13,
-    icon: "Zen Spiritual"
+    icon: "Zen Spiritual",
   },
 ];

@@ -21,7 +21,7 @@ function App() {
     <div className="App" id={contextTheme}>
         <Navbar />
         <span className="Mode">{contextTheme} Mode</span>
-        <label htmlFor="material-switch">
+        <label className="react-switch-label" htmlFor="material-switch">
         <ReactSwitch
             checked={checked}
             onChange={handleSwitch}
