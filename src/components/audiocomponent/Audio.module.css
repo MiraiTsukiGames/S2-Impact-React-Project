@@ -13,6 +13,10 @@
   padding: 5px;
 }
 
+.active {
+  background-color: #00bfff;
+}
+
 @media (max-width: 768px) {
   .buttons {
     display: flex;

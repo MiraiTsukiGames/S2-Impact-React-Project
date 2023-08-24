@@ -5,6 +5,7 @@ import styles from "./Audio.module.css";
 export default function Track({ audioRef }) {
   const [trackIndex, setTrackIndex] = useState(0);
   const [currentTrack, setCurrentTrack] = useState(tracks[trackIndex]);
+  
 
   useEffect(() => {
     if (audioRef.current) {
@@ -25,7 +26,9 @@ export default function Track({ audioRef }) {
       <div className={styles.buttons}>
       {tracks.map((sound, index) => (
         <button key={sound.id}
-          onClick={() => handleTrackChange(index)}>
+          onClick={() => handleTrackChange(index)}
+          className={index === trackIndex ? styles.active : ""}
+          >
           {sound.icon}
           </button>
       ))}

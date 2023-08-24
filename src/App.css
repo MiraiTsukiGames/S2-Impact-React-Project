@@ -31,15 +31,6 @@ body {
  background-color: #000000;
 }
 
-#Dark button {
-  background-color: white;
-  color: #000000;
-}
-
-#Dark .hamburger svg {
-  fill: #000000;
-}
-
 #Dark .Mode {
   color: #ffffff;
 }
@@ -51,11 +42,6 @@ body {
 #Light {
   color: #c4e1fa;
   background-color: #ffffff;
-}
-
-#Light button {
-  background-color: #000000;
-  color: #c4e1fa;
 }
 
 .react-switch-label {
