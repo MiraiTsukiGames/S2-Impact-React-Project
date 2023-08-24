@@ -31,11 +31,14 @@ img {
   padding: 10px 20px;
   border: none;
   border-radius: 50%;
-  background-color: #3a4fa1;
+  cursor: pointer;
 }
 
-.hamburger:hover {
-  background-color: #6785fc;
+.hamburger svg {
+  fill: white;
+  background-color: transparent;
+  z-index: 1;
+  font-size: 15px;
 }
 
 .navbar-sidebar {
@@ -61,6 +64,7 @@ img {
 
 .nav-item {
   margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .nav-item:hover {
