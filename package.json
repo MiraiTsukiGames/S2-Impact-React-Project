@@ -15,6 +15,7 @@
     "react-audio-player": "^0.17.0",
     "react-countdown-circle-timer": "^3.2.1",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
     "react-router-dom": "^6.15.0",
     "react-scripts": "5.0.1",
     "react-switch": "^7.0.0",
