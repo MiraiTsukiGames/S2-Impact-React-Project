@@ -3,11 +3,12 @@ import SpecificButton from "../button/Playbutton";
 import styles from "./Countdown.module.css";
 
 export default function Countdown({ audioRef, isActive, setIsActive }) {
+  // Countdown Time hook
   const [countdownTime, setCountdownTime] = useState({
     hours: 0,
     minutes: 10,
     seconds: 59,
-  }); // Countdown Time hook
+  }); 
   const [inputsEnabled, setInputsEnabled] = useState(true); // Inputs Enabled hook
 
   useEffect(() => {
