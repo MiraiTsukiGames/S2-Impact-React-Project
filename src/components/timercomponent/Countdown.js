@@ -3,40 +3,45 @@ import SpecificButton from "../button/Playbutton";
 import styles from "./Countdown.module.css";
 
 export default function Countdown({ audioRef, isActive, setIsActive }) {
-  const [countdownTime, setCountdownTime] = useState({ hours: 0, minutes: 10, seconds: 59 }); // Countdown Time hook
+  const [countdownTime, setCountdownTime] = useState({
+    hours: 0,
+    minutes: 10,
+    seconds: 59,
+  }); // Countdown Time hook
   const [inputsEnabled, setInputsEnabled] = useState(true); // Inputs Enabled hook
 
   useEffect(() => {
     let intervalId = null; // Interval id variable
 
     // Check if the timer is active
-    if (isActive) { 
-      audioRef.current.play(); // Audio play 
-      intervalId = setInterval(() => { // Timer active
-        setCountdownTime((prevTime) => { 
-          let { hours, minutes, seconds } = prevTime; // Hours, minutes and seconds variables 
+    if (isActive) {
+      audioRef.current.play(); // Audio play
+      intervalId = setInterval(() => {
+        // Timer active
+        setCountdownTime((prevTime) => {
+          let { hours, minutes, seconds } = prevTime; // Hours, minutes and seconds variables
 
-          // Calculate hours, minutes, seconds 
+          // Calculate hours, minutes, seconds
           let newSeconds = seconds - 1;
           let newMinutes = newSeconds < 0 ? minutes - 1 : minutes;
           let newHours = newMinutes < 0 ? hours - 1 : hours;
-          
+
           newSeconds = newSeconds < 0 ? 59 : newSeconds;
           newMinutes = newMinutes < 0 ? 59 : newMinutes;
           newHours = newHours < 0 ? 0 : newHours;
 
           // Check if seconds, minutes and hours is 0 stop timer
           if (newSeconds === 0 && newMinutes === 0 && newHours === 0) {
-          setIsActive(false);
-          setInputsEnabled(true);
+            setIsActive(false);
+            setInputsEnabled(true);
           }
 
           // Return hours, minutes, seconds
           return {
             hours: newHours,
             minutes: newMinutes,
-            seconds: newSeconds
-          }
+            seconds: newSeconds,
+          };
         });
       }, 1000);
     } else {
@@ -62,7 +67,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
       return;
     }
 
-    // Min and max value 
+    // Min and max value
     const parsedValue = parseInt(inputValue);
 
     // Check if the value is nan return
@@ -73,7 +78,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
 
     // Clamp min and max value
     const clampedValue = Math.min(Math.max(parsedValue, minValue), maxValue);
-    
+
     setCountdownTime((prevTime) => ({
       ...prevTime,
       [name]: clampedValue,
@@ -83,7 +88,14 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
   // Handle click button stop and play function
   const handleClick = () => {
     // Check if countdown is all empty or 0 timer false
-    if ((countdownTime.hours === "" || countdownTime.minutes === "" || countdownTime.seconds === "") || (countdownTime.hours === 0 && countdownTime.minutes === 0 && countdownTime.seconds === 0)) {
+    if (
+      countdownTime.hours === "" ||
+      countdownTime.minutes === "" ||
+      countdownTime.seconds === "" ||
+      (countdownTime.hours === 0 &&
+        countdownTime.minutes === 0 &&
+        countdownTime.seconds === 0)
+    ) {
       setIsActive(false);
 
       //If countdown input hours, minutes or seconds is empty return 0
@@ -101,16 +113,17 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
 
   return (
     <section>
-    {/* Display the countdown timer */}
-      <span className={styles.timer}> 
-        {countdownTime.hours} : {countdownTime.minutes} : {countdownTime.seconds}
+      {/* Display the countdown timer */}
+      <span className={styles.timer}>
+        {countdownTime.hours} : {countdownTime.minutes} :{" "}
+        {countdownTime.seconds}
       </span>
       {/* Display the instruction */}
       <p className={styles.paragraph}>Please select the time and click play</p>
       {/* Render the SpecificButton component */}
       <SpecificButton onClick={handleClick} isActive={isActive} />
       <div>
-      {/* Label and input for hours */}
+        {/* Label and input for hours */}
         <label htmlFor="hours" className={styles.letters}>
           Hours:
         </label>

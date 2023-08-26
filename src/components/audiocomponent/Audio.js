@@ -5,7 +5,7 @@ import styles from "./Audio.module.css";
 export default function Track({ audioRef, isActive }) {
   const [trackIndex, setTrackIndex] = useState(0); // Track index hook
   const [currentTrack, setCurrentTrack] = useState(Tracks[trackIndex]); // Current track hook
-  
+
   // useEffect for trackIndex and audioRef
   useEffect(() => {
     if (audioRef.current) {
@@ -22,8 +22,11 @@ export default function Track({ audioRef, isActive }) {
 
   return (
     <>
-      <h2 className={styles.sounds}>Sounds</h2> {/* Component for the section subtitle */}
-      <audio ref={audioRef} src={currentTrack.src} /> {/* Component for the section audio */}
+      {/* Component for the section subtitle */}
+      <h2 className={styles.sounds}>Sounds</h2>
+      {/* Component for the section audio */}
+      <audio ref={audioRef} src={currentTrack.src} />
+      {/* Create audio buttons */}
       <div className={styles.buttons}>
         {Tracks.map((sound, index) => (
           <button
@@ -33,9 +36,9 @@ export default function Track({ audioRef, isActive }) {
             disabled={isActive}
           >
             {sound.title}
-          </button> 
+          </button>
         ))}
-      </div> {/* Create audio buttons */}
+      </div>
     </>
   );
 }

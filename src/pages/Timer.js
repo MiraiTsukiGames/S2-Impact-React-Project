@@ -13,23 +13,26 @@ const Timer = () => {
   const navigate = useNavigate(); // Get the navigation function from react-router-dom
 
   return (
-    <section className="container"> 
+    <section className="container">
       <Title text="Timer" /> {/* Component for the section title */}
       <div className="countdownContainer">
-        <Countdown 
+        <Countdown
           audioRef={audioRef}
           isActive={isActive}
           setIsActive={setIsActive}
-        /> {/* Component for the section countdown */}
+        />
+        {/* Component for the section countdown */}
       </div>
       <div className="trackContainer">
-        <Track audioRef={audioRef} isActive={isActive} /> {/* Component for the section track */}
+        <Track audioRef={audioRef} isActive={isActive} />
+        {/* Component for the section track */}
       </div>
       <div className="quoteContainer">
         <Quote /> {/* Component for the section quote */}
       </div>
       <div className="buttonContainer">
-        <Button onClick={() => navigate("/")} text="Home" /> {/* Button to initiate navigation to the "home" page */}
+        <Button onClick={() => navigate("/")} text="Home" />
+        {/* Button to initiate navigation to the "home" page */}
       </div>
     </section>
   );
