@@ -127,9 +127,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
       <SpecificButton onClick={handleClick} isActive={isActive} />
       <div>
         {/* Label and input for hours */}
-        <label htmlFor="hours" className={styles.letters}>
-          Hours:
-        </label>
+        <p className={styles.letters}>Hours:</p>
         <input
           type="number"
           id="hours"
@@ -142,9 +140,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           className={styles.numbers}
         />
         {/* Label and input for minutes */}
-        <label htmlFor="minutes" className={styles.letters}>
-          Minutes:
-        </label>
+        <p className={styles.letters}>Minutes:</p>
         <input
           type="number"
           id="minutes"
@@ -157,9 +153,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           className={styles.numbers}
         />
         {/* Label and input for seconds */}
-        <label htmlFor="seconds" className={styles.letters}>
-          Seconds:
-        </label>
+        <p className={styles.letters}>Seconds:</p>
         <input
           type="number"
           id="seconds"
