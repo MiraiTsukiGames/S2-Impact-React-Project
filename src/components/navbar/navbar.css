@@ -89,6 +89,7 @@ img {
     top: 10%;
   }
 }
+
 @media only screen and (max-width: 576px) {
   nav .brand {
     margin-top: 10px;
