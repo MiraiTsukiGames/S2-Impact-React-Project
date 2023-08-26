@@ -118,7 +118,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
     <section>
       {/* Display the countdown timer */}
       <span className={styles.timer}>
-        {countdownTime.hours} : {countdownTime.minutes} :{" "}
+        {countdownTime.hours} : {countdownTime.minutes} :
         {countdownTime.seconds}
       </span>
       {/* Display the instruction */}
