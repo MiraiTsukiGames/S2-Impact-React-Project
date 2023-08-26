@@ -8,7 +8,7 @@ import Footer from "./components/footer/footer";
 import ReactSwitch from "react-switch";
 import "./App.css";
 
-function App() {
+const App = () => {
   const { contextTheme, setContextTheme } = useThemeContext();
   const [checked, setChecked] = useState(false);
 
