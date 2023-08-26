@@ -3,55 +3,53 @@ import SpecificButton from "../button/Playbutton";
 import styles from "./Countdown.module.css";
 
 export default function Countdown({ audioRef, isActive, setIsActive }) {
-  const [countdownTime, setCountdownTime] = useState({ hours: 0, minutes: 10, seconds: 0 });
-  const [inputsEnabled, setInputsEnabled] = useState(true);
+  const [countdownTime, setCountdownTime] = useState({ hours: 0, minutes: 10, seconds: 59 }); // Countdown Time hook
+  const [inputsEnabled, setInputsEnabled] = useState(true); // Inputs Enabled hook
 
   useEffect(() => {
-    let intervalId = null;
+    let intervalId = null; // Interval id variable
 
-    if (isActive) {
-      audioRef.current.play();
-      intervalId = setInterval(() => {
-        setCountdownTime((prevTime) => {
-          let { hours, minutes, seconds } = prevTime;
+    // Check if the timer is active
+    if (isActive) { 
+      audioRef.current.play(); // Audio play 
+      intervalId = setInterval(() => { // Timer active
+        setCountdownTime((prevTime) => { 
+          let { hours, minutes, seconds } = prevTime; // Hours, minutes and seconds variables 
 
-          if (hours === "" || minutes === "" || seconds === "") {
-            hours = hours === "" ? 0 : parseInt(hours);
-            minutes = minutes === "" ? 0 : parseInt(minutes);
-            seconds = seconds === "" ? 0 : parseInt(seconds);
-          }
-
+          // Calculate hours, minutes, seconds 
           let newSeconds = seconds - 1;
-          let newMinutes = minutes;
-          let newHours = hours;
+          let newMinutes = newSeconds < 0 ? minutes - 1 : minutes;
+          let newHours = newMinutes < 0 ? hours - 1 : hours;
+          
+          newSeconds = newSeconds < 0 ? 59 : newSeconds;
+          newMinutes = newMinutes < 0 ? 59 : newMinutes;
+          newHours = newHours < 0 ? 0 : newHours;
 
-          if (newSeconds < 0) {
-            newSeconds = 59;
-            newMinutes -= 1;
+          // Check if seconds, minutes and hours is 0 stop timer
+          if (newSeconds === 0 && newMinutes === 0 && newHours === 0) {
+          setIsActive(false);
+          setInputsEnabled(true);
           }
 
-          if (newMinutes < 0) {
-            newMinutes = 59;
-            newHours -= 1;
-          }
-
+          // Return hours, minutes, seconds
           return {
             hours: newHours,
             minutes: newMinutes,
-            seconds: newSeconds,
-          };
+            seconds: newSeconds
+          }
         });
       }, 1000);
     } else {
-      clearInterval(intervalId);
-      audioRef.current.pause();
+      clearInterval(intervalId); //Clear timer
+      audioRef.current.pause(); // Audio pause
     }
 
     return () => {
       clearInterval(intervalId);
     };
-  }, [isActive, audioRef]);
+  }, [isActive, audioRef, setIsActive]);
 
+  //Handle Time Change function event key Backspace
   const handleTimeChange = (event, name) => {
     const inputValue = event.target.value;
     const key = event.key;
@@ -64,34 +62,31 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
       return;
     }
 
-    const MAX_VALUES = {
-      hours: 23,
-      minutes: 59,
-      seconds: 59,
-    };
-
-    const MIN_VALUES = {
-      hours: 0,
-      minutes: 0,
-      seconds: 0,
-    };
-
+    // Min and max value 
     const parsedValue = parseInt(inputValue);
+
+    // Check if the value is nan return
     if (isNaN(parsedValue)) return;
 
-    const maxValue = MAX_VALUES[name];
-    const minValue = MIN_VALUES[name];
-    if (parsedValue > maxValue || parsedValue < minValue) return;
+    const maxValue = 59;
+    const minValue = 0;
 
+    // Clamp min and max value
+    const clampedValue = Math.min(Math.max(parsedValue, minValue), maxValue);
+    
     setCountdownTime((prevTime) => ({
       ...prevTime,
-      [name]: parsedValue,
+      [name]: clampedValue,
     }));
   };
 
+  // Handle click button stop and play function
   const handleClick = () => {
-    if (countdownTime.hours === "" || countdownTime.minutes === "" || countdownTime.seconds === "") {
+    // Check if countdown is all empty or 0 timer false
+    if ((countdownTime.hours === "" || countdownTime.minutes === "" || countdownTime.seconds === "") || (countdownTime.hours === 0 && countdownTime.minutes === 0 && countdownTime.seconds === 0)) {
       setIsActive(false);
+
+      //If countdown input hours, minutes or seconds is empty return 0
       setCountdownTime({
         hours: countdownTime.hours === "" ? 0 : countdownTime.hours,
         minutes: countdownTime.minutes === "" ? 0 : countdownTime.minutes,
@@ -100,22 +95,22 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
       return;
     }
 
-    if (countdownTime.hours === 0 && countdownTime.minutes === 0 && countdownTime.seconds === 0) {
-      return;
-    }
-    
     setIsActive((current) => !current);
     setInputsEnabled((enabled) => !enabled);
   };
 
   return (
     <section>
-      <span className={styles.timer}>
+    {/* Display the countdown timer */}
+      <span className={styles.timer}> 
         {countdownTime.hours} : {countdownTime.minutes} : {countdownTime.seconds}
       </span>
+      {/* Display the instruction */}
       <p className={styles.paragraph}>Please select the time and click play</p>
+      {/* Render the SpecificButton component */}
       <SpecificButton onClick={handleClick} isActive={isActive} />
       <div>
+      {/* Label and input for hours */}
         <label htmlFor="hours" className={styles.letters}>
           Hours:
         </label>
@@ -130,6 +125,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           disabled={!inputsEnabled}
           className={styles.numbers}
         />
+        {/* Label and input for minutes */}
         <label htmlFor="minutes" className={styles.letters}>
           Minutes:
         </label>
@@ -144,6 +140,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           disabled={!inputsEnabled}
           className={styles.numbers}
         />
+        {/* Label and input for seconds */}
         <label htmlFor="seconds" className={styles.letters}>
           Seconds:
         </label>
