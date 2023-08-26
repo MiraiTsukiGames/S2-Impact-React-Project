@@ -13,6 +13,11 @@
   padding: 5px;
 }
 
+.buttons button:disabled:not(.active) {
+  background-color: darkgray;
+  cursor: not-allowed;
+}
+
 .active {
   background-color: #00bfff;
 }
