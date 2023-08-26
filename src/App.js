@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Timer from "./pages/Timer";
-import Footer from "./components/footer/footer";
+import Footer from "./components/footer/Footer";
 import ReactSwitch from "react-switch";
 import "./App.css";
 
