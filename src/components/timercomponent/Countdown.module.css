@@ -28,7 +28,11 @@
   font-size: 18px;
   text-align: center;
 }
-
+@media (min-width: 820px) {
+  .letters {
+    top: 51%;
+  }
+}
 @media only screen and (max-width: 576px) {
   .timer {
     font-size: 20px;
@@ -41,7 +45,7 @@
 
   .letters {
     font-size: 14px;
-    top: 48%;
+    top: 50%;
   }
 
   .numbers {
@@ -51,5 +55,11 @@
 
   ::placeholder {
     font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .letters {
+    top: 48%;
   }
 }
