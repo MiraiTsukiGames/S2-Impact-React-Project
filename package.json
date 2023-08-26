@@ -24,7 +24,9 @@
     "react-scripts": "5.0.1",
     "react-switch": "^7.0.0",
     "react-use-audio-player": "^2.1.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@babel/plugin-proposal-private-property-in-object": "^7.2.1.0"
+
   },
   "scripts": {
     "start": "react-scripts start",
