@@ -5,7 +5,6 @@ export default function button(props) {
   return (
     <button
       className={styles.button}
-      disabled={props.disabled}
       onClick={props.onClick}
     >
       {props.text}
