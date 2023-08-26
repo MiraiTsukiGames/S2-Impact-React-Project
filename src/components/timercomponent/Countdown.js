@@ -71,14 +71,20 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
     // Min and max value
     const parsedValue = parseInt(inputValue);
 
-    // Check if the value is nan return
+    // Check if the value is NaN or exceeds the maximum value
     if (isNaN(parsedValue)) return;
 
     const maxValue = 59;
     const minValue = 0;
 
     // Clamp min and max value
-    const clampedValue = Math.min(Math.max(parsedValue, minValue), maxValue);
+    let clampedValue = Math.min(Math.max(parsedValue, minValue), maxValue);
+      
+    // Clamp only for the "hours" field
+    if (name === "hours") {
+      const maxHoursValue = 23;
+      clampedValue = Math.min(clampedValue, maxHoursValue);
+    }
 
     setCountdownTime((prevTime) => ({
       ...prevTime,
@@ -90,20 +96,16 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
   const handleClick = () => {
     // Check if countdown is all empty or 0 timer false
     if (
-      countdownTime.hours === "" ||
-      countdownTime.minutes === "" ||
-      countdownTime.seconds === "" ||
-      (countdownTime.hours === 0 &&
-        countdownTime.minutes === 0 &&
-        countdownTime.seconds === 0)
+      (countdownTime.hours === "" || countdownTime.minutes === "" || countdownTime.seconds === "") ||
+      (countdownTime.hours === 0 && countdownTime.minutes === 0 && countdownTime.seconds === 0)
     ) {
       setIsActive(false);
 
-      //If countdown input hours, minutes or seconds is empty return 0
+      // If countdown input hours, minutes or seconds is empty or exceeds the maximum value, set to 0
       setCountdownTime({
-        hours: countdownTime.hours === "" ? 0 : countdownTime.hours,
-        minutes: countdownTime.minutes === "" ? 0 : countdownTime.minutes,
-        seconds: countdownTime.seconds === "" ? 0 : countdownTime.seconds,
+        hours: (countdownTime.hours === ""  ? 0 : countdownTime.hours),
+        minutes: (countdownTime.minutes === "" ? 0 : countdownTime.minutes),
+        seconds: (countdownTime.seconds === "" ? 0 : countdownTime.seconds)
       });
       return;
     }
