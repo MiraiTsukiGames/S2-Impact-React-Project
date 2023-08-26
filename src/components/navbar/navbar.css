@@ -51,7 +51,7 @@ img {
   width: 250px;
   padding: 20px;
   border-radius: 10px;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: right 0.3s ease-in-out;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -84,7 +84,13 @@ img {
   text-decoration: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 1024px) {
+  .navbar-sidebar.open {
+    right: 0%;
+    overflow: hidden;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 920px) {
   .navbar-sidebar {
     top: 10%;
   }
