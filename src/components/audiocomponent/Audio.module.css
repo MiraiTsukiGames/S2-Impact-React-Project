@@ -33,6 +33,10 @@
     padding: 0.5rem 1rem;
     text-align: center;
   }
+
+  .buttons button {
+    margin: 5px 5px;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -48,9 +52,7 @@
     margin-top: 0;
   }
 
-  p {
-    font-size: 12px;
-    margin-top: 0;
-    margin-bottom: 0;
+  .buttons button {
+    margin: 0 5px;
   }
 }
