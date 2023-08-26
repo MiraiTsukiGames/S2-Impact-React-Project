@@ -3,7 +3,7 @@ import SpecificButton from "../button/Playbutton";
 import styles from "./Countdown.module.css";
 
 export default function Countdown({ audioRef, isActive, setIsActive }) {
-  const [time, setTime] = useState({ hours: 0, minutes: 10, seconds: 0 });
+  const [countdownTime, setCountdownTime] = useState({ hours: 0, minutes: 10, seconds: 0 });
   const [inputsEnabled, setInputsEnabled] = useState(true);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
     if (isActive) {
       audioRef.current.play();
       intervalId = setInterval(() => {
-        setTime((prevTime) => {
+        setCountdownTime((prevTime) => {
           let { hours, minutes, seconds } = prevTime;
 
           if (hours === "" || minutes === "" || seconds === "") {
@@ -53,11 +53,11 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
   }, [isActive, audioRef]);
 
   const handleTimeChange = (event, name) => {
-    const value = event.target.value;
+    const inputValue = event.target.value;
     const key = event.key;
 
     if (key === "Backspace") {
-      setTime((prevTime) => ({
+      setCountdownTime((prevTime) => ({
         ...prevTime,
         [name]: "",
       }));
@@ -76,33 +76,34 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
       seconds: 0,
     };
 
-    const parsedValue = parseInt(value);
+    const parsedValue = parseInt(inputValue);
     if (isNaN(parsedValue)) return;
 
     const maxValue = MAX_VALUES[name];
     const minValue = MIN_VALUES[name];
     if (parsedValue > maxValue || parsedValue < minValue) return;
 
-    setTime((prevTime) => ({
+    setCountdownTime((prevTime) => ({
       ...prevTime,
       [name]: parsedValue,
     }));
   };
 
   const handleClick = () => {
-    if (time.hours === "" || time.minutes === "" || time.seconds === "") {
+    if (countdownTime.hours === "" || countdownTime.minutes === "" || countdownTime.seconds === "") {
       setIsActive(false);
-      setTime({
-        hours: time.hours === "" ? 0 : time.hours,
-        minutes: time.minutes === "" ? 0 : time.minutes,
-        seconds: time.seconds === "" ? 0 : time.seconds,
+      setCountdownTime({
+        hours: countdownTime.hours === "" ? 0 : countdownTime.hours,
+        minutes: countdownTime.minutes === "" ? 0 : countdownTime.minutes,
+        seconds: countdownTime.seconds === "" ? 0 : countdownTime.seconds,
       });
       return;
     }
 
-    if (time.hours === 0 && time.minutes === 0 && time.seconds === 0) {
+    if (countdownTime.hours === 0 && countdownTime.minutes === 0 && countdownTime.seconds === 0) {
       return;
     }
+    
     setIsActive((current) => !current);
     setInputsEnabled((enabled) => !enabled);
   };
@@ -110,7 +111,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
   return (
     <section>
       <span className={styles.timer}>
-        {time.hours} : {time.minutes} : {time.seconds}
+        {countdownTime.hours} : {countdownTime.minutes} : {countdownTime.seconds}
       </span>
       <p className={styles.paragraph}>Please select the time and click play</p>
       <SpecificButton onClick={handleClick} isActive={isActive} />
