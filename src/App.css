@@ -76,7 +76,7 @@ body {
   background-color: #ffffff;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .Mode {
     font-size: 15px;
     transform: translateY(-15px);
@@ -85,5 +85,15 @@ body {
   .react-switch-label {
     top: 70px;
     transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .Mode {
+    font-size: 14px;
+    transform: translateY(-15px);
+  } 
+  .react-switch-label {
+    top: 55px;
   }
 }
