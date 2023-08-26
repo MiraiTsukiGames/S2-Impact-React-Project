@@ -22,7 +22,6 @@ img {
   font-weight: bold;
   font-size: 20px;
   position: relative;
-
 }
 .hamburger {
   position: absolute;
@@ -35,7 +34,6 @@ img {
   cursor: pointer;
   background-color: #00bfff;
 }
-
 
 .hamburger svg {
   background-color: transparent;
@@ -74,7 +72,7 @@ img {
   border-bottom: 1px solid #333;
   width: 100%;
   text-align: center;
-  }
+}
 
 .nav-item:hover {
   background-color: aqua;
@@ -109,11 +107,5 @@ img {
   .hamburger svg {
     width: 20px;
     height: 20px;
-    
   }
-
 }
-
-
-
-

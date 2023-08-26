@@ -12,7 +12,6 @@ import sound11 from "../../assets/sound/stream-1.mp3";
 import sound12 from "../../assets/sound/tibet-bowls-2-olistik-sound-project-patrizio-yoga-161662.mp3";
 import sound13 from "../../assets/sound/zen-spiritual-yoga-massage-meditation-spa-relax-ambient-music-18403.mp3";
 
-
 export const tracks = [
   {
     src: sound1,

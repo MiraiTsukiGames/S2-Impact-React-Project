@@ -8,9 +8,9 @@ const Navbar = () => {
 
   return (
     <nav>
-    <div className="brand">
-      <img src={brand} alt="logo" className="brand-name" />
-      <p className="brand-text">Borcelle Yoga Studio</p>
+      <div className="brand">
+        <img src={brand} alt="logo" className="brand-name" />
+        <p className="brand-text">Borcelle Yoga Studio</p>
       </div>
       <button
         className="hamburger"

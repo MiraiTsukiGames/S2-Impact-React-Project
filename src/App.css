@@ -14,11 +14,11 @@ body {
 
 #Dark a,
 .brand-text {
- color: white;
+  color: white;
   text-decoration: none;
 }
 
-#Light .brand-text{
+#Light .brand-text {
   color: #0d3f67;
 }
 #Light a {
@@ -27,8 +27,8 @@ body {
 }
 
 #Dark {
- color: white;
- background-color: #000000;
+  color: white;
+  background-color: #000000;
 }
 
 #Dark .Mode {
@@ -59,7 +59,6 @@ body {
   font-weight: bold;
 }
 
-
 .App {
   max-width: 2000px;
 }
@@ -69,7 +68,7 @@ body {
   filter: invert(100%);
 }
 
-#Dark .navbar-sidebar{
+#Dark .navbar-sidebar {
   background-color: #000000;
 }
 
@@ -81,7 +80,6 @@ body {
   .Mode {
     font-size: 15px;
     transform: translateY(-15px);
-
   }
 
   .react-switch-label {

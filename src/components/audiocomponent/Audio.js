@@ -14,23 +14,25 @@ export default function Track({ audioRef, isActive }) {
   }, [audioRef, trackIndex]);
 
   const handleTrackChange = (index) => {
-      setTrackIndex(index);
-      setCurrentTrack(tracks[index]);
-    };
+    setTrackIndex(index);
+    setCurrentTrack(tracks[index]);
+  };
 
   return (
     <>
       <h2 className={styles.sounds}>Sounds</h2>
       <audio ref={audioRef} src={currentTrack.src} />
       <div className={styles.buttons}>
-      {tracks.map((sound, index) => (
-        <button key={sound.id}
-          onClick={() => handleTrackChange(index)}
-          className={index === trackIndex ? styles.active : ""}
-          disabled={isActive}>
-          {sound.icon}
+        {tracks.map((sound, index) => (
+          <button
+            key={sound.id}
+            onClick={() => handleTrackChange(index)}
+            className={index === trackIndex ? styles.active : ""}
+            disabled={isActive}
+          >
+            {sound.icon}
           </button>
-      ))}
+        ))}
       </div>
     </>
   );

@@ -7,9 +7,6 @@ import Track from "../components/audiocomponent/Audio";
 import Title from "../components/Title/Title";
 import "./Timer.css";
 
-
-
-
 const Timer = () => {
   const audioRef = useRef(new Audio());
   const [isActive, setIsActive] = useState(false);
@@ -19,15 +16,19 @@ const Timer = () => {
     <section className="container">
       <Title testo="Timer" />
       <div className="countdownContainer">
-        <Countdown audioRef={audioRef} isActive={isActive} setIsActive={setIsActive}/>
+        <Countdown
+          audioRef={audioRef}
+          isActive={isActive}
+          setIsActive={setIsActive}
+        />
       </div>
-        <div className="trackContainer">
+      <div className="trackContainer">
         <Track audioRef={audioRef} isActive={isActive} />
       </div>
-        <div className="quoteContainer">
+      <div className="quoteContainer">
         <Quote />
       </div>
-        <div className="buttonContainer">
+      <div className="buttonContainer">
         <Button onClick={() => navigate("/")} text="Home" />
       </div>
     </section>

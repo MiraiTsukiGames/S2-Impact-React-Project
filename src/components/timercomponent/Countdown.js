@@ -99,10 +99,8 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
       });
       return;
     }
-  
-    if (
-      (time.hours === 0 && time.minutes === 0 && time.seconds === 0) 
-    ) {
+
+    if (time.hours === 0 && time.minutes === 0 && time.seconds === 0) {
       return;
     }
     setIsActive((current) => !current);
