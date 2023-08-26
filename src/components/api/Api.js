@@ -11,7 +11,7 @@ const Quotes = () => {
   }, []);
 
   const getQuote = async () => {
-    const res = await axios.get(`https://api.quotable.io/random`);
+    const res = await axios.get(`https://api.quotable.io/random?maxLength=50`);
     setQuote(res.data.content);
     setAuthor(res.data.author);
   };

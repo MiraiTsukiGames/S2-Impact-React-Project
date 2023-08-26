@@ -90,6 +90,10 @@ img {
   }
 }
 @media only screen and (max-width: 576px) {
+  nav .brand {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
   .brand-text {
     font-size: 18px;
   }
@@ -99,7 +103,7 @@ img {
   }
 
   .hamburger {
-    top: 0%;
+    top: -2%;
     right: 5%;
     transform: translate(5%, 80%);
   }
