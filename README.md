@@ -1,4 +1,4 @@
-# Borcelle Yoga Studio App:me
+# Borcelle Yoga Studio App
 
 .
 
