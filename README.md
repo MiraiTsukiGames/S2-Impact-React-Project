@@ -24,11 +24,14 @@ You may also see any lint errors in the console.
 ## Installation💾
 First all install [Node.js](https://nodejs.org/it)
 
-##Clone project
-
-copy and paste 
+## Clone project
+ copy and paste 
+`https://github.com/MiraiTsukiGames/S2-Impact-React-Project.git`
 
 `npm install` for install the dependeces
+
+## npm start
+`npm start` for start the project
 
 ## Contact📧
 Linkedin profile([])
