@@ -1,12 +1,12 @@
-# Borcelle Yoga Studio App
+# Borcelle Yoga Studio App:me
 
 .
 
-## How to works?
+## How to works?❓
 
 In the project directory, you can run:
 
-## Mobile
+## Mobile📱
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,10 +14,15 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-## Languages
+## Languages⚛️
 - React.js
 - Random Quotes Api
   
 ## Try it!
+Borcelle Yoga Studio(https://borcelleyogastudio.netlify.app/)
 
 ## Clone the project
+First all
+
+## Contact📧
+Linkedin profile([])
