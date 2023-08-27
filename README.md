@@ -16,7 +16,7 @@ You may also see any lint errors in the console.
 
 ## Languages⚛️
 - React.js
-- Random Quotes Api
+- [Quotable.io](https://api.quotable.io)
   
 ## Try it!
 [Borcelle Yoga Studio](https://borcelleyogastudio.netlify.app/)
