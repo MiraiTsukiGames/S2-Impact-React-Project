@@ -24,7 +24,11 @@ You may also see any lint errors in the console.
 ## Installation💾
 First all install [Node.js](https://nodejs.org/it)
 
-`npm install`
+##Clone project
+
+copy and paste 
+
+`npm install` for install the dependeces
 
 ## Contact📧
 Linkedin profile([])
