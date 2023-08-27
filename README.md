@@ -13,14 +13,10 @@ Extra:
 
 ## Mobile📱
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This is the mobile layout.
 
 ## Languages⚛️
-- React.js
+- [React.js](https://react.dev/)
 - [Quotable.io](https://api.quotable.io)
   
 ## Try it!
