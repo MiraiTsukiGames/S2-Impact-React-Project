@@ -21,8 +21,10 @@ You may also see any lint errors in the console.
 ## Try it!
 [Borcelle Yoga Studio](https://borcelleyogastudio.netlify.app/)
 
-## Clone the project
-First all
+## Installation💾
+First all install [Node.js](https://nodejs.org/it)
+
+`npm install`
 
 ## Contact📧
 Linkedin profile([])
