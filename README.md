@@ -35,4 +35,5 @@ First all install [Node.js](https://nodejs.org/it)
 `npm start` for start the project
 
 ## Contact📧
-Linkedin profile([])
+if you want contact me
+Linkedin profile: [Samanta Mancini](https://www.linkedin.com/in/samantamancini/)
