@@ -19,7 +19,7 @@ You may also see any lint errors in the console.
 - Random Quotes Api
   
 ## Try it!
-Borcelle Yoga Studio(https://borcelleyogastudio.netlify.app/)
+[Borcelle Yoga Studio](https://borcelleyogastudio.netlify.app/)
 
 ## Clone the project
 First all
