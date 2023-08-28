@@ -97,7 +97,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 667px) and (orientation: landscape) {
+@media only screen and (min-width: 667px) and (max-width: 915px) and (orientation: landscape) {
   .Mode {
     display: flex;
     position: relative;

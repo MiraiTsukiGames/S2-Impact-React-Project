@@ -11,13 +11,20 @@ footer p {
   font-size: 18px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   footer {
     width: 80%;
-    padding-top: 10px;
   }
   footer p {
     font-size: 12px;
     text-align: center;
+  }
+}
+
+@media only screen and (min-width: 667px) and (max-width: 915px) and (orientation: landscape) {
+
+  footer p {
+    font-size: 12px;
+    margin-top: 30px;
   }
 }

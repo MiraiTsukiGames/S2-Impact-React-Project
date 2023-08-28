@@ -26,9 +26,9 @@ img {
 .hamburger {
   position: absolute;
   top: 0%;
-  right: 10%;
-  transform: translate(10%, 80%);
-  padding: auto;
+  right: 5%;
+  transform: translate(5%, 80%);
+  padding: 10px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -41,7 +41,6 @@ img {
   width: 25px;
   height: 25px;
   text-align: center;
-  padding: auto;
 }
 
 .navbar-sidebar {
@@ -84,19 +83,27 @@ img {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 667px) and (max-width: 915px) and (orientation: landscape) {
   .navbar-sidebar.open {
     right: 0%;
     overflow: hidden;
   }
+
+  .navbar-sidebar {
+    top: 30%;
+  }
+
+  .hamburger {
+    right: 3%;
+  }
 }
-@media only screen and (min-width: 768px) and (max-width: 920px) {
+@media only screen and (min-width: 768px) and (max-width: 920px) and (orientation: portrait) {
   .navbar-sidebar {
     top: 10%;
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   nav .brand {
     margin-top: 10px;
     margin-bottom: 5px;

@@ -9,7 +9,6 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 100vh;
-  overflow-x: hidden;
 }
 
 .banner p {
@@ -25,13 +24,13 @@
   border-radius: 5px;
 }
 
-@media only screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) and (orientation: portrait) {
   .banner {
     background-size: contain;
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
   .banner {
     background-image: url("../assets/img/covercell.jpg");
     background-size: 100% 100%;
@@ -43,5 +42,20 @@
 
   .banner p {
     font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 667px) and (max-width: 915px) and (orientation: landscape) {
+  .banner {
+    background-image: url("../assets/img/coverhome.jpg");
+    height: 80vh;
+  }
+  
+  .card {
+    background-color: black;
+    width: 80%;
+    padding: 20px;
+    opacity: 80%;
+    border-radius: 5px;
   }
 }
