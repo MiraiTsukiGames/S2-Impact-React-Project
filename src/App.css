@@ -76,7 +76,7 @@ body {
   background-color: #ffffff;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (orientation: portrait) {
   .Mode {
     font-size: 18px;
     top: 20%;
@@ -85,7 +85,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   .Mode {
     font-size: 14px;
     transform: translateY(0);
@@ -94,5 +94,23 @@ body {
   .react-switch-label {
     top: 55px;
 
+  }
+}
+
+@media only screen and (min-width: 667px) and (orientation: landscape) {
+  .Mode {
+    display: flex;
+    position: relative;
+    transform: translateY(-30px);
+    left: 20%;
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .react-switch-label {
+    position: absolute;
+    top: 50px;
+    left: 58%;
+    transform: translateX(-58%);
   }
 }
