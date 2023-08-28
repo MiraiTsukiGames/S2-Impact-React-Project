@@ -116,16 +116,12 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
 
   return (
     <section>
-      {/* Display the countdown timer */}
       <span className={styles.timer}>
         {countdownTime.hours} : {countdownTime.minutes} :
         {countdownTime.seconds}
       </span>
-      {/* Display the instruction */}
       <p className={styles.paragraph}>Please select the time and click play</p>
-      {/* Render the SpecificButton component */}
       <SpecificButton onClick={handleClick} isActive={isActive} />
-        {/* Render Hours, minutes, seconds letters*/}
         <div className={styles.letters}>
         <p>Hours:</p>
         <p>Minutes:</p>
