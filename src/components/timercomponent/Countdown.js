@@ -125,11 +125,14 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
       <p className={styles.paragraph}>Please select the time and click play</p>
       {/* Render the SpecificButton component */}
       <SpecificButton onClick={handleClick} isActive={isActive} />
-      <div>
-        {/* Label and input for hours */}
+        {/* Render Hours, minutes, seconds letters*/}
         <div className={styles.letters}>
         <p>Hours:</p>
+        <p>Minutes:</p>
+        <p>Seconds:</p>
         </div>
+        {/* Render Hours, minutes, seconds input*/}
+        <div className={styles.numbers}>
         <input
           type="number"
           id="hours"
@@ -139,10 +142,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           onKeyDown={(event) => handleTimeChange(event, "hours")}
           onChange={(event) => handleTimeChange(event, "hours")}
           disabled={!inputsEnabled}
-          className={styles.numbers}
         />
-        {/* Label and input for minutes */}
-        <p className={styles.letters}>Minutes:</p>
         <input
           type="number"
           id="minutes"
@@ -152,10 +152,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           onKeyDown={(event) => handleTimeChange(event, "minutes")}
           onChange={(event) => handleTimeChange(event, "minutes")}
           disabled={!inputsEnabled}
-          className={styles.numbers}
         />
-        {/* Label and input for seconds */}
-        <p className={styles.letters}>Seconds:</p>
         <input
           type="number"
           id="seconds"
@@ -165,9 +162,8 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           onKeyDown={(event) => handleTimeChange(event, "seconds")}
           onChange={(event) => handleTimeChange(event, "seconds")}
           disabled={!inputsEnabled}
-          className={styles.numbers}
         />
-      </div>
+        </div>
     </section>
   );
 }

@@ -8,26 +8,20 @@
   font-size: 15px;
 }
 
-.letters  {
+.letters, .numbers  {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-size: 18px;
-  position: relative;
-}
-
-.numbers {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 4px;
+  margin: 5px;
 }
 
 .numbers input {
-  margin-left: 10px;
+ padding: 4px;
+  
 }
+
 
 ::placeholder {
   font-size: 18px;
