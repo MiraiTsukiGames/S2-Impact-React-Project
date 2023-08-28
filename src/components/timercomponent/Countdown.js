@@ -133,6 +133,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
         </div>
         {/* Render Hours, minutes, seconds input*/}
         <div className={styles.numbers}>
+        <label htmlFor="hours">
         <input
           type="number"
           id="hours"
@@ -143,6 +144,8 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           onChange={(event) => handleTimeChange(event, "hours")}
           disabled={!inputsEnabled}
         />
+        </label>
+        <label htmlFor="minutes">
         <input
           type="number"
           id="minutes"
@@ -153,6 +156,8 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           onChange={(event) => handleTimeChange(event, "minutes")}
           disabled={!inputsEnabled}
         />
+        </label>
+        <label htmlFor="seconds">
         <input
           type="number"
           id="seconds"
@@ -163,6 +168,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
           onChange={(event) => handleTimeChange(event, "seconds")}
           disabled={!inputsEnabled}
         />
+        </label>
         </div>
     </section>
   );
