@@ -22,11 +22,8 @@ export default function Track({ audioRef, isActive }) {
 
   return (
     <>
-      {/* Component for the section subtitle */}
       <h2 className={styles.sounds}>Sounds</h2>
-      {/* Component for the section audio */}
       <audio ref={audioRef} src={currentTrack.src} />
-      {/* Create audio buttons */}
       <div className={styles.buttons}>
         {Tracks.map((sound, index) => (
           <button
