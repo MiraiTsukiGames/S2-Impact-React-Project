@@ -17,8 +17,8 @@
   }
 }
 
-@media only screen and (min-width: 667px) and (max-width: 915px) and (orientation: landscape) {
+@media only screen and (min-width: 667px) and (max-width: 1024px) and (orientation: landscape) {
   .title {
-    font-size: 20px;
+    font-size: 30px;
   }
 }

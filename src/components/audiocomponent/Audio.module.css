@@ -22,7 +22,7 @@
   background-color: #00bfff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: portrait) {
   .buttons {
     display: flex;
     flex-wrap: wrap;
@@ -39,9 +39,9 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) and (orientation: portrait) {
   .sounds {
-    font-size: 18x;
+    font-size: 18px;
   }
 
   .buttons {
@@ -54,5 +54,11 @@
 
   .buttons button {
     margin: 0 5px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .buttons {
+    margin-top: 0px;
   }
 }
