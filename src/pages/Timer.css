@@ -49,7 +49,7 @@
   .quoteContainer {
     top: 15%;
     max-width: 300px;
-    height: fit-content;
+    height: auto;
     font-size: 12px;
   }
 
