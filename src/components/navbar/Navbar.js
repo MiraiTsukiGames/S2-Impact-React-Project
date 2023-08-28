@@ -13,6 +13,7 @@ const Navbar = () => {
         <p className="brand-text">Borcelle Yoga Studio</p>
       </div>
       <button
+        title="hamburger-menu"
         className="hamburger"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
