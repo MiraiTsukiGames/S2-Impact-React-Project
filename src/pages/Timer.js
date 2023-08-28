@@ -14,25 +14,22 @@ const Timer = () => {
 
   return (
     <section className="container">
-      <Title text="Timer" /> {/* Component for the section title */}
+      <Title text="Timer" /> 
       <div className="countdownContainer">
         <Countdown
           audioRef={audioRef}
           isActive={isActive}
           setIsActive={setIsActive}
         />
-        {/* Component for the section countdown */}
       </div>
       <div className="trackContainer">
         <Track audioRef={audioRef} isActive={isActive} />
-        {/* Component for the section track */}
       </div>
       <div className="quoteContainer">
-        <Quote /> {/* Component for the section quote */}
+        <Quote />
       </div>
       <div className="buttonContainer">
         <Button onClick={() => navigate("/")} text="Home" />
-        {/* Button to initiate navigation to the "home" page */}
       </div>
     </section>
   );
