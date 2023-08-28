@@ -7,11 +7,15 @@ const Quotes = () => {
   const [author, setAuthor] = useState("");
 
   useEffect(() => {
+    // Fetch a random quote when the component mounts
     getQuote();
   }, []);
 
   const getQuote = async () => {
+    // Make an API call to fetch a random quote
     const res = await axios.get(`https://api.quotable.io/random?maxLength=50`);
+
+    // Set the quote and author in the component state
     setQuote(res.data.content);
     setAuthor(res.data.author);
   };
