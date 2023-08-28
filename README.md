@@ -14,6 +14,17 @@ Extra:
 ## Mobile📱
 
 This is the mobile layout.
+- Home portrait <br>
+![Immagine](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/7cfc3f21-4430-4b90-a681-f7723b8393a5)
+
+- Home landscape <br>
+![Immagine3](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/10ce742e-9050-4e62-b03f-ad71496d89ca)
+
+
+- Timer <br>
+![Immagine](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/ab3a3821-3b73-478e-971d-7165eadc4da1)
+
+
 
 ## Languages⚛️
 - [React.js](https://react.dev/)
