@@ -26,7 +26,7 @@ This is the mobile layout.
 ![Immagine](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/7cfc3f21-4430-4b90-a681-f7723b8393a5)
 
 - Home landscape <br>
-
+![Immagine3](https://github.com/MiraiTsukiGames/S2-Impact-React-Project/assets/118011618/88d0c601-5a0e-4219-ade4-b1dced0dfd47)
 
 
 - Timer <br>
