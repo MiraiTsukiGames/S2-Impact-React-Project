@@ -11,7 +11,7 @@ const Home = () => {
     <section className={styles.banner}>
       <div className={styles.card}>
         <Title text="Welcome to Borcelle Yoga Studio" />
-        <p>Your healthcare is our mission.</p> 
+        <p>Your healthcare is our mission.</p>
         <Button onClick={() => navigate("timer")} text="Getting started" />
       </div>
     </section>

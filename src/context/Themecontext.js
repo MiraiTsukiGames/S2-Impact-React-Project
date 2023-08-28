@@ -11,7 +11,6 @@ export const ThemeContextProvider = ({ children }) => {
   // Create an object with the values to be provided in the context
   const values = { contextTheme, setContextTheme };
 
-
   return (
     // Provide the values to the context
     <ThemeContext.Provider value={values}>{children}</ThemeContext.Provider>

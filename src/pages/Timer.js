@@ -14,7 +14,7 @@ const Timer = () => {
 
   return (
     <section className="container">
-      <Title text="Timer" /> 
+      <Title text="Timer" />
       <div className="countdownContainer">
         <Countdown
           audioRef={audioRef}

@@ -8,7 +8,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
     hours: 0,
     minutes: 10,
     seconds: 59,
-  }); 
+  });
   const [inputsEnabled, setInputsEnabled] = useState(true); // Inputs Enabled hook
 
   useEffect(() => {
@@ -79,7 +79,7 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
 
     // Clamp min and max value
     let clampedValue = Math.min(Math.max(parsedValue, minValue), maxValue);
-      
+
     // Clamp only for the "hours" field
     if (name === "hours") {
       const maxHoursValue = 23;
@@ -96,16 +96,20 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
   const handleClick = () => {
     // Check if countdown is all empty or 0 timer false
     if (
-      (countdownTime.hours === "" || countdownTime.minutes === "" || countdownTime.seconds === "") ||
-      (countdownTime.hours === 0 && countdownTime.minutes === 0 && countdownTime.seconds === 0)
+      countdownTime.hours === "" ||
+      countdownTime.minutes === "" ||
+      countdownTime.seconds === "" ||
+      (countdownTime.hours === 0 &&
+        countdownTime.minutes === 0 &&
+        countdownTime.seconds === 0)
     ) {
       setIsActive(false);
 
       // If countdown input hours, minutes or seconds is empty or exceeds the maximum value, set to 0
       setCountdownTime({
-        hours: (countdownTime.hours === ""  ? 0 : countdownTime.hours),
-        minutes: (countdownTime.minutes === "" ? 0 : countdownTime.minutes),
-        seconds: (countdownTime.seconds === "" ? 0 : countdownTime.seconds)
+        hours: countdownTime.hours === "" ? 0 : countdownTime.hours,
+        minutes: countdownTime.minutes === "" ? 0 : countdownTime.minutes,
+        seconds: countdownTime.seconds === "" ? 0 : countdownTime.seconds,
       });
       return;
     }
@@ -117,54 +121,53 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
   return (
     <section>
       <span className={styles.timer}>
-        {countdownTime.hours} : {countdownTime.minutes} :
-        {countdownTime.seconds}
+        {countdownTime.hours} : {countdownTime.minutes} :{countdownTime.seconds}
       </span>
       <p className={styles.paragraph}>Please select the time and click play</p>
       <SpecificButton onClick={handleClick} isActive={isActive} />
-        <div className={styles.letters}>
+      <div className={styles.letters}>
         <p>Hours:</p>
         <p>Minutes:</p>
         <p>Seconds:</p>
-        </div>
-        <div className={styles.numbers}>
+      </div>
+      <div className={styles.numbers}>
         <label htmlFor="hours">
-        <input
-          type="number"
-          id="hours"
-          min={0}
-          max={23}
-          placeholder={0}
-          onKeyDown={(event) => handleTimeChange(event, "hours")}
-          onChange={(event) => handleTimeChange(event, "hours")}
-          disabled={!inputsEnabled}
-        />
+          <input
+            type="number"
+            id="hours"
+            min={0}
+            max={23}
+            placeholder={0}
+            onKeyDown={(event) => handleTimeChange(event, "hours")}
+            onChange={(event) => handleTimeChange(event, "hours")}
+            disabled={!inputsEnabled}
+          />
         </label>
         <label htmlFor="minutes">
-        <input
-          type="number"
-          id="minutes"
-          min={0}
-          max={59}
-          placeholder={0}
-          onKeyDown={(event) => handleTimeChange(event, "minutes")}
-          onChange={(event) => handleTimeChange(event, "minutes")}
-          disabled={!inputsEnabled}
-        />
+          <input
+            type="number"
+            id="minutes"
+            min={0}
+            max={59}
+            placeholder={0}
+            onKeyDown={(event) => handleTimeChange(event, "minutes")}
+            onChange={(event) => handleTimeChange(event, "minutes")}
+            disabled={!inputsEnabled}
+          />
         </label>
         <label htmlFor="seconds">
-        <input
-          type="number"
-          id="seconds"
-          min={0}
-          max={59}
-          placeholder={0}
-          onKeyDown={(event) => handleTimeChange(event, "seconds")}
-          onChange={(event) => handleTimeChange(event, "seconds")}
-          disabled={!inputsEnabled}
-        />
+          <input
+            type="number"
+            id="seconds"
+            min={0}
+            max={59}
+            placeholder={0}
+            onKeyDown={(event) => handleTimeChange(event, "seconds")}
+            onChange={(event) => handleTimeChange(event, "seconds")}
+            disabled={!inputsEnabled}
+          />
         </label>
-        </div>
+      </div>
     </section>
   );
 }
