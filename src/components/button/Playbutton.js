@@ -5,7 +5,7 @@ import styles from "./Playbutton.module.css";
 
 const SpecificButton = ({ onClick, isActive }) => {
   return (
-    <button className={styles.button} onClick={onClick}>
+    <button title="play" className={styles.button} onClick={onClick}>
       <FontAwesomeIcon icon={isActive ? faPause : faPlay} />
     </button>
   );
