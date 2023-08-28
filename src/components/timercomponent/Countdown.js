@@ -127,7 +127,6 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
         <p>Minutes:</p>
         <p>Seconds:</p>
         </div>
-        {/* Render Hours, minutes, seconds input*/}
         <div className={styles.numbers}>
         <label htmlFor="hours">
         <input
