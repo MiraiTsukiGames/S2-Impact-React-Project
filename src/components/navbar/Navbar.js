@@ -4,6 +4,7 @@ import "./Navbar.css";
 import brand from "../../assets/img/logo.png";
 
 const Navbar = () => {
+  // State to track if the sidebar is open or not
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
