@@ -46,8 +46,8 @@
 
   .buttons {
     display: inline-block;
-    max-width: fit-content;
-    height: fit-content;
+    max-width: 350px;
+    height: auto;
     margin-right: 0;
     margin-top: 0;
   }
