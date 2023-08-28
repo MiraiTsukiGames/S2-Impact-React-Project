@@ -9,11 +9,17 @@ import ReactSwitch from "react-switch";
 import "./App.css";
 
 const App = () => {
+  // Get the current theme from the context
   const { contextTheme, setContextTheme } = useThemeContext();
+
+  // State for the switch value
   const [checked, setChecked] = useState(false);
 
+  // Handler for the switch change event
   const handleSwitch = (nextChecked) => {
+    // Change the theme in the context
     setContextTheme((state) => (state === "Light" ? "Dark" : "Light"));
+    // Update the switch value
     setChecked(nextChecked);
   };
 
