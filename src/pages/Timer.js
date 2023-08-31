@@ -16,8 +16,8 @@ export default function Timer() {
   return (
     <section className="container">
       <Helmet>
-        <title>Borcelle Yoga Studio</title>
-        <meta name="description" content="meditation app" />
+        <title>Timer</title>
+        <meta name="description" content="timer for meditation" />
       </Helmet>
       <Title text="Timer" />
       <div className="countdownContainer">
