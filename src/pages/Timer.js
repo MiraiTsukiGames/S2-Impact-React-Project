@@ -5,6 +5,7 @@ import Countdown from "../components/timercomponent/Countdown";
 import Button from "../components/button/Button";
 import Track from "../components/audiocomponent/Audio";
 import Title from "../components/title/Title";
+import { Helmet } from "react-helmet";
 import "./Timer.css";
 
 const Timer = () => {
@@ -14,6 +15,10 @@ const Timer = () => {
 
   return (
     <section className="container">
+      <Helmet>
+        <title>Timer</title>
+        <meta name="description" content="timer for meditation-app" />
+      </Helmet>
       <Title text="Timer" />
       <div className="countdownContainer">
         <Countdown

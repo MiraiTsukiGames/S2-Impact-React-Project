@@ -10,11 +10,10 @@ export default function Home() {
 
   return (
     <section className={styles.banner}>
-    <Helmet>
-    <meta charSet="utf-8" />
-    <title>Borcelle Yoga Studio</title>
-    <meta name="description" content="meditation app" />
-    </Helmet>
+      <Helmet>
+        <title>Borcelle Yoga Studio</title>
+        <meta name="description" content="meditation app" />
+      </Helmet>
       <div className={styles.card}>
         <Title text="Welcome to Borcelle Yoga Studio" />
         <p>Your healthcare is our mission.</p>
@@ -22,5 +21,4 @@ export default function Home() {
       </div>
     </section>
   );
-};
-
+}
