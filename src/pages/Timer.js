@@ -8,7 +8,7 @@ import Title from "../components/title/Title";
 import { Helmet } from "react-helmet";
 import "./Timer.css";
 
-const Timer = () => {
+export default function Timer() {
   const audioRef = useRef(new Audio()); // Audio hook
   const [isActive, setIsActive] = useState(false); // Active timer hook
   const navigate = useNavigate(); // Get the navigation function from react-router-dom
@@ -16,8 +16,8 @@ const Timer = () => {
   return (
     <section className="container">
       <Helmet>
-        <title>Timer</title>
-        <meta name="description" content="timer for meditation-app" />
+        <title>Borcelle Yoga Studio</title>
+        <meta name="description" content="meditation app" />
       </Helmet>
       <Title text="Timer" />
       <div className="countdownContainer">
@@ -38,6 +38,4 @@ const Timer = () => {
       </div>
     </section>
   );
-};
-
-export default Timer;
+}
