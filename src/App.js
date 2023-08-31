@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import Timer from "./pages/Timer";
 import Footer from "./components/footer/Footer";
 import ReactSwitch from "react-switch";
+import { Helmet } from "react-helmet";
 import "./App.css";
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
 
   return (
     <div className="App" id={contextTheme}>
+    <Helmet>
       <Navbar />
       <span className="Mode">{contextTheme} Mode</span>
       <label className="react-switch-label" htmlFor="material-switch">
@@ -49,6 +51,7 @@ const App = () => {
         <Route path="timer" element={<Timer />} />
       </Routes>
       <Footer />
+      </Helmet>
     </div>
   );
 };
