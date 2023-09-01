@@ -1,8 +1,10 @@
+/* Styles for the navigation */
 nav {
   width: 80%;
   box-shadow: 1px #333;
 }
 
+/* Styles for the brand/logo section */
 nav .brand {
   display: flex;
   justify-content: flex-start;
@@ -11,6 +13,7 @@ nav .brand {
   margin-top: 30px;
 }
 
+/* Styles for the logo image */
 img {
   width: 45px;
   height: 45px;
@@ -18,11 +21,14 @@ img {
   left: 0;
 }
 
+/* Styles for the brand text */
 .brand-text {
   font-weight: bold;
   font-size: 20px;
   position: relative;
 }
+
+/* Styles for the hamburger menu button */
 .hamburger {
   position: absolute;
   top: 0%;
@@ -35,6 +41,7 @@ img {
   background-color: #00bfff;
 }
 
+/* Styles for the hamburger menu icon */
 .hamburger svg {
   background-color: transparent;
   z-index: 1;
@@ -43,6 +50,7 @@ img {
   text-align: center;
 }
 
+/* Styles for the sidebar navigation */
 .navbar-sidebar {
   position: fixed;
   top: 15%;
@@ -56,10 +64,12 @@ img {
   z-index: 1;
 }
 
+/* Styles for opening the sidebar navigation */
 .navbar-sidebar.open {
   right: -3%;
 }
 
+/* Styles for the navigation items */
 .navbar-nav {
   list-style: none;
   padding: 0;
@@ -73,6 +83,7 @@ img {
   text-align: center;
 }
 
+/* Styles for the hover effect on navigation items */
 .nav-item:hover {
   background-color: #00bfff;
   width: 100%;
@@ -83,6 +94,7 @@ img {
   text-decoration: none;
 }
 
+/* Media query for screens in landscape orientation */
 @media only screen and (min-width: 667px) and (max-width: 1024px) and (orientation: landscape) {
   .navbar-sidebar.open {
     right: 0%;
@@ -97,13 +109,17 @@ img {
     right: 3%;
   }
 }
+
+/* Media query for screens in portrait orientation */
 @media only screen and (min-width: 768px) and (max-width: 920px) and (orientation: portrait) {
   .navbar-sidebar {
     top: 10%;
   }
 }
 
+/* Media query for smaller screens in portrait orientation */
 @media only screen and (max-width: 576px) and (orientation: portrait) {
+  /* Adjustments for the brand/logo section */
   nav .brand {
     margin-top: 10px;
     margin-bottom: 5px;
@@ -112,6 +128,7 @@ img {
     font-size: 18px;
   }
 
+  /* Adjustments for the sidebar navigation */
   .navbar-sidebar {
     top: 20%;
   }
