@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Title.module.css";
 
+// title function
 const Title = ({ text }) => {
   return <h1 className={styles.title}>{text}</h1>;
 };
