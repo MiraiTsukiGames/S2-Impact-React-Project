@@ -1,3 +1,4 @@
+/* Global styles for all elements */
 * {
   padding: 0;
   margin: 0;
@@ -5,6 +6,7 @@
   overflow: hidden;
 }
 
+/* Styles for the body */
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 20px;
@@ -12,44 +14,55 @@ body {
   margin: 0;
 }
 
+/* Styles for links in dark mode and brand text */
 #Dark a,
 .brand-text {
   color: white;
   text-decoration: none;
 }
 
+/* Styles for brand text in light mode */
 #Light .brand-text {
   color: #0d3f67;
 }
+
+/* Styles for links in light mode */
 #Light a {
   color: #0d3f67;
   text-decoration: none;
 }
 
+/* Styles for dark mode */
 #Dark {
   color: white;
   background-color: #000000;
 }
 
+/* Styles for mode text in dark mode */
 #Dark .Mode {
   color: #ffffff;
 }
 
+/* Styles for mode text in light mode */
 #Light .Mode {
   color: #0d3f67;
 }
 
+/* Styles for light mode */
 #Light {
   color: #c4e1fa;
   background-color: #ffffff;
 }
 
+/* Styles for the react switch label */
 .react-switch-label {
   position: absolute;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Styles for the mode text */
 .Mode {
   display: flex;
   position: relative;
@@ -59,24 +72,30 @@ body {
   font-weight: bold;
 }
 
+/* Styles for the app container */
 .App {
   max-width: 2000px;
 }
 
+/* Styles for the brand name in dark mode */
 #Dark .brand-name {
   background-color: transparent;
   filter: invert(100%);
 }
 
+/* Styles for the sidebar navigation in dark mode */
 #Dark .navbar-sidebar {
   background-color: #000000;
 }
 
+/* Styles for the sidebar navigation in light mode */
 #Light .navbar-sidebar {
   background-color: #ffffff;
 }
 
+/* Media query for screens with maximum width of 768px in portrait orientation */
 @media only screen and (max-width: 768px) and (orientation: portrait) {
+  /* Adjustments for the mode text */
   .Mode {
     font-size: 18px;
     top: 20%;
@@ -85,7 +104,9 @@ body {
   }
 }
 
+/* Media query for screens with maximum width of 576px in portrait orientation */
 @media only screen and (max-width: 576px) and (orientation: portrait) {
+   /* Adjustments for the mode text */
   .Mode {
     font-size: 14px;
     transform: translateY(0);
@@ -96,7 +117,9 @@ body {
   }
 }
 
+/* Media query for screens with minimum width of 667px and maximum width of 915px in landscape orientation */
 @media only screen and (min-width: 667px) and (max-width: 915px) and (orientation: landscape) {
+  /* Adjustments for the mode text */
   .Mode {
     display: flex;
     position: relative;
