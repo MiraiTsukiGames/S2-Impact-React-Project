@@ -3,8 +3,9 @@ import axios from "axios";
 import styles from "./Api.module.css";
 
 const Quotes = () => {
+  // Quote hook
   const [quote, setQuote] = useState("");
-  const [author, setAuthor] = useState("");
+  const [author, setAuthor] = useState(""); // Author hook
 
   useEffect(() => {
     // Fetch a random quote when the component mounts
@@ -22,6 +23,7 @@ const Quotes = () => {
 
   return (
     <>
+    {/*title quote, author quote*/}
       <h2 className={styles.title}>Quotes</h2>
       <p className={styles.quotes}>{quote}</p>
       <p className={styles.author}>{author}</p>
