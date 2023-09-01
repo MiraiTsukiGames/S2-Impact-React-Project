@@ -114,22 +114,29 @@ export default function Countdown({ audioRef, isActive, setIsActive }) {
       return;
     }
 
+    //Set is active inactive
     setIsActive((current) => !current);
     setInputsEnabled((enabled) => !enabled);
   };
 
   return (
+    // timer section
     <section>
+    {/*hours-minutes-seconds display*/}
       <span className={styles.timer}>
         {countdownTime.hours} : {countdownTime.minutes} :{countdownTime.seconds}
       </span>
+      {/*paragraph*/}
       <p className={styles.paragraph}>Please select the time and click play</p>
+      {/*play/stop button*/}
       <SpecificButton onClick={handleClick} isActive={isActive} />
+      {/*letters hours, minutes, seconds*/}
       <div className={styles.letters}>
         <p>Hours:</p>
         <p>Minutes:</p>
         <p>Seconds:</p>
       </div>
+      {/*input hours, minutes, seconds*/}
       <div className={styles.numbers}>
         <label htmlFor="hours">
           <input
