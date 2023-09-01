@@ -1,3 +1,4 @@
+/* Styles for the container */
 .container {
   text-align: center;
   display: flex;
@@ -11,10 +12,12 @@
   height: 100vh;
 }
 
+/* Styles for the track container */
 .trackContainer {
   margin-top: 20px;
 }
 
+/* Styles for the quote container */
 .quoteContainer {
   position: absolute;
   top: 15%;
@@ -27,11 +30,13 @@
   height: 150px;
 }
 
+/* Styles for the button container */
 .buttonContainer {
   align-self: center;
   margin-top: 20px;
 }
 
+/* Media query for screens with a maximum width of 768px */
 @media only screen and (max-width: 768px) {
   .container {
     display: flex;
@@ -40,12 +45,14 @@
     justify-content: center;
   }
 
+  /* Adjustments for the countdown container */
   .countdownContainer {
     width: 100%;
     max-width: 300px;
     margin: 10px;
   }
 
+  /* Adjustments for the quote container */
   .quoteContainer {
     top: 15%;
     max-width: 200px;
@@ -53,11 +60,13 @@
     font-size: 12px;
   }
 
+  /* Adjustments for the track container */
   .trackContainer {
     margin-top: 0;
     padding: 0;
   }
 
+  /* Adjustments for the button container */
   .buttonContainer {
     margin-top: 0;
     padding: 0;
