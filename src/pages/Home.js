@@ -9,14 +9,18 @@ export default function Home() {
   const navigate = useNavigate(); // Get the navigation function from react-router-dom
 
   return (
+    /* banner section */
     <section className={styles.banner}>
       <Helmet>
+     {/* title section */}
         <title>Borcelle Yoga Studio</title>
         <meta name="description" content="meditation app" />
       </Helmet>
+      {/* card section */}
       <div className={styles.card}>
         <Title text="Welcome to Borcelle Yoga Studio" />
         <p>Your healthcare is our mission.</p>
+        {/* button section */}
         <Button onClick={() => navigate("timer")} text="Getting started" />
       </div>
     </section>
