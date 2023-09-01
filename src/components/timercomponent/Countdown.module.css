@@ -1,13 +1,16 @@
+/* Styles for the timer */
 .timer {
   font-size: 35px;
   font-weight: bold;
   margin-top: 10px;
 }
 
+/* Styles for the paragraphs */
 .paragraph {
   font-size: 15px;
 }
 
+/* Styles for the letters and numbers sections */
 .letters,
 .numbers {
   display: flex;
@@ -18,44 +21,56 @@
   margin: 5px;
 }
 
+/* Styles for the input field in the numbers section */
 .numbers input {
   padding: 4px;
 }
 
+/* Styles for the placeholder text */
 ::placeholder {
   font-size: 18px;
   text-align: center;
 }
+
+/* Media query for screens with minimum width of 820px in portrait orientation */
 @media (min-width: 820px) and (orientation: portrait) {
   .letters {
     top: 51%;
   }
 }
+
+/* Media query for screens with maximum width of 576px in portrait orientation */
 @media only screen and (max-width: 576px) and (orientation: portrait) {
+  /* Adjustments for the timer */
   .timer {
     font-size: 20px;
     margin-top: 0;
   }
 
+   /* Adjustments for the paragraphs */
   .paragraph {
     font-size: 12px;
   }
 
+  /* Adjustments for the letters section */
   .letters {
     font-size: 14px;
     top: 50%;
   }
 
+  /* Adjustments for the numbers section */
   .numbers {
     font-size: 12px;
     margin: 0 5px;
   }
 
+  /* Adjustments for the placeholder text */
   ::placeholder {
     font-size: 14px;
   }
 }
 
+/* Media query for screens with minimum width of 375px and maximum width of 540px in portrait orientation */
 @media only screen and (min-width: 375px) and (max-width: 540px) and (orientation: portrait) {
   .letters {
     top: 48%;
