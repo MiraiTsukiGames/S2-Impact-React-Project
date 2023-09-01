@@ -5,7 +5,7 @@ import Countdown from "../components/timercomponent/Countdown";
 import Button from "../components/button/Button";
 import Track from "../components/audiocomponent/Audio";
 import Title from "../components/title/Title";
-import { Helmet } from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import "./Timer.css";
 
 export default function Timer() {
@@ -14,6 +14,7 @@ export default function Timer() {
   const navigate = useNavigate(); // Get the navigation function from react-router-dom
 
   return (
+    <HelmetProvider>
     <section className="container">
       <Helmet>
         <title>Timer</title>
@@ -37,5 +38,6 @@ export default function Timer() {
         <Button onClick={() => navigate("/")} text="Home" />
       </div>
     </section>
+    </HelmetProvider>
   );
 }
