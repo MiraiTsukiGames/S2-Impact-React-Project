@@ -1,3 +1,4 @@
+/*button styling */
 .button {
   padding: 5px 15px;
   font-size: 15px;
@@ -7,16 +8,19 @@
   cursor: pointer;
 }
 
+/*button hover styling */
 .button:hover {
   background-color: #00bfff;
 }
 
+/*media query mobile*/
 @media only screen and (max-width: 576px) {
   .button {
     font-size: 12px;
   }
 }
 
+/*media query desktop*/
 @media only screen and (min-width: 1024px) {
   .button {
     margin: 0;
