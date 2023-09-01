@@ -1,3 +1,4 @@
+/* Styles for the banner section */
 .banner {
   text-align: center;
   display: flex;
@@ -11,11 +12,13 @@
   height: 100vh;
 }
 
+/* Styles for the paragraph inside the banner */
 .banner p {
   font-size: 16px;
   margin-bottom: 20px;
 }
 
+/* Styles for the card */
 .card {
   background-color: black;
   width: 80%;
@@ -24,13 +27,17 @@
   border-radius: 5px;
 }
 
+/* Media query for screens with maximum width of 1280px in portrait orientation */
 @media only screen and (max-width: 1280px) and (orientation: portrait) {
+   /* Adjustments for the banner */
   .banner {
     background-size: contain;
   }
 }
 
+/* Media query for screens with maximum width of 768px in portrait orientation */
 @media only screen and (max-width: 768px) and (orientation: portrait) {
+  /* Adjustments for the banner */
   .banner {
     background-image: url("../assets/img/covercell.jpg");
     background-size: 100% 100%;
@@ -39,18 +46,20 @@
     margin: 0;
     padding: 0;
   }
-
+  /* Adjustments for the paragraph inside the banner */
   .banner p {
     font-size: 12px;
   }
 }
 
+/* Media query for screens with minimum width of 667px and maximum width of 915px in landscape orientation */
 @media only screen and (min-width: 667px) and (max-width: 915px) and (orientation: landscape) {
+  /* Adjustments for the banner */
   .banner {
     background-image: url("../assets/img/coverhome.jpg");
     height: 80vh;
   }
-
+  /* Adjustments for the card */
   .card {
     background-color: black;
     width: 80%;
