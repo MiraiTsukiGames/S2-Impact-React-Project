@@ -22,8 +22,11 @@ export default function Track({ audioRef, isActive }) {
 
   return (
     <>
+      {/*Sounds title */}
       <h2 className={styles.sounds}>Sounds</h2>
+      {/*Audio component */}
       <audio ref={audioRef} src={currentTrack.src} />
+      {/*Audio buttons */}
       <div className={styles.buttons}>
         {Tracks.map((sound, index) => (
           <button
