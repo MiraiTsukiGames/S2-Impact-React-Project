@@ -8,11 +8,14 @@ const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
+    /*navbar section*/
     <nav>
+    {/*brand section*/}
       <div className="brand">
         <img src={brand} alt="logo" className="brand-name" />
         <p className="brand-text">Borcelle Yoga Studio</p>
       </div>
+      {/*hamburger button*/}
       <button
         title="hamburger-menu"
         className="hamburger"
@@ -31,6 +34,7 @@ const Navbar = () => {
           />
         </svg>
       </button>
+      {/*sidebar menu*/}
       <div className={`navbar-sidebar ${isSidebarOpen ? "open" : ""}`}>
         <ul className="navbar-nav">
           <li className="nav-item">
