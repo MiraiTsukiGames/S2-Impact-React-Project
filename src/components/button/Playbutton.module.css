@@ -1,3 +1,4 @@
+/*button styling */
 .button {
   padding: 5px 15px;
   font-size: 25px;
@@ -8,10 +9,12 @@
   background-color: white;
 }
 
+/*button hover styling */
 .button:hover {
   background-color: #00bfff;
 }
 
+/*media query styling */
 @media screen and (max-width: 576px) {
   .button {
     margin-bottom: 0;
