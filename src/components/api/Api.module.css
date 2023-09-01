@@ -1,14 +1,17 @@
+/* title styling */
 .title {
   font-size: 25px;
   font-style: normal;
   margin-top: 20px;
 }
 
+/* quote styling */
 .quotes {
   font-size: 18px;
   margin-top: 10px;
 }
 
+/* author styling */
 .author {
   font-size: 12px;
   font-weight: bold;
@@ -16,6 +19,7 @@
   margin-bottom: 10px;
 }
 
+/* button styling */
 button {
   padding: 5px 15px;
   font-size: 15px;
@@ -25,10 +29,12 @@ button {
   cursor: pointer;
 }
 
+/* button hover styling */
 button:hover {
   background-color: #00bfff;
 }
 
+/*media query cellphone */
 @media only screen and (max-width: 576px) {
   .title {
     font-size: 20px;
