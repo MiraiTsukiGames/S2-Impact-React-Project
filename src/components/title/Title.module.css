@@ -1,23 +1,30 @@
+/* Styles for the title */
 .title {
   font-size: 50px;
   text-align: center;
 }
 
+/* Media query for screens with maximum width of 768px in portrait orientation */
 @media only screen and (max-width: 768px) and (orientation: portrait) {
+  /* Adjustments for the title */
   .title {
     font-size: 45px;
     margin-bottom: 10px;
   }
 }
 
+/* Media query for screens with maximum width of 576px in portrait orientation */
 @media only screen and (max-width: 576px) and (orientation: portrait) {
+  /* Adjustments for the title */
   .title {
     font-size: 20px;
     margin-bottom: 0;
   }
 }
 
+/* Media query for screens with minimum width of 667px and maximum width of 1024px in landscape orientation */
 @media only screen and (min-width: 667px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Adjustments for the title */
   .title {
     font-size: 30px;
   }
