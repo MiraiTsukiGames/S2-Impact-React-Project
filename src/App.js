@@ -24,8 +24,11 @@ const App = () => {
   };
 
   return (
+    /*App container*/
     <div className="App" id={contextTheme}>
+    {/*Navbar container*/}
       <Navbar />
+      {/*Switch section*/}
       <span className="Mode">{contextTheme} Mode</span>
       <label className="react-switch-label" htmlFor="material-switch">
         <ReactSwitch
@@ -44,6 +47,7 @@ const App = () => {
           id="material-switch"
         />
       </label>
+      {/*Pages section*/}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="timer" element={<Timer />} />
