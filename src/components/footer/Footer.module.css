@@ -1,3 +1,4 @@
+/* Styles for the footer section */
 footer {
   position: absolute;
   bottom: 0;
@@ -7,10 +8,12 @@ footer {
   left: 5%;
 }
 
+/* Styles for the paragraphs inside the footer */
 footer p {
   font-size: 18px;
 }
 
+/* Media query for screens with maximum width of 576px in portrait orientation */
 @media only screen and (max-width: 576px) and (orientation: portrait) {
   footer {
     width: 80%;
@@ -21,6 +24,7 @@ footer p {
   }
 }
 
+/* Media query for screens with minimum width of 667px, maximum width of 915px, and in landscape orientation */
 @media only screen and (min-width: 667px) and (max-width: 915px) and (orientation: landscape) {
   footer p {
     font-size: 12px;
