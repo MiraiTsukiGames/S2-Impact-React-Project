@@ -5,7 +5,7 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <p>Copyright©2023 Samanta Mancini </p>
+      <p>Copyright © {new Date().getFullYear()} Samanta Mancini </p>
     </footer>
   );
 };

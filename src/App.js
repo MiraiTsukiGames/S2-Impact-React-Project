@@ -16,11 +16,11 @@ const App = () => {
   const [checked, setChecked] = useState(false);
 
   // Handler for the switch change event
-  const handleSwitch = (nextChecked) => {
+  const handleSwitch = () => {
     // Change the theme in the context
     setContextTheme((state) => (state === "Light" ? "Dark" : "Light"));
     // Update the switch value
-    setChecked(nextChecked);
+    setChecked(!checked);
   };
 
   return (
