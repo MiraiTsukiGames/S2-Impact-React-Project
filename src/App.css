@@ -74,7 +74,7 @@ body {
 
 /* Styles for the app container */
 .App {
-  max-width: 2000px;
+  max-width: 100%;
 }
 
 /* Styles for the brand name in dark mode */
